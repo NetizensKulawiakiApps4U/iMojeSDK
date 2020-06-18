@@ -5,14 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/iMojeSDK.svg?style=flat)](https://cocoapods.org/pods/iMojeSDK)
 [![Platform](https://img.shields.io/cocoapods/p/iMojeSDK.svg?style=flat)](https://cocoapods.org/pods/iMojeSDK)
 
-## iMoje app test
-
-To run the app test project: 
-
-1. clone the repo [https://git.netizens.pl/imoje/imoje-app-ios.git](https://git.netizens.pl/imoje/imoje-app-ios.git) 
-
-2. run `pod install` from the imoje-app-ios directory first.
-
 ## Requirements
 
 ### Configure sdk
