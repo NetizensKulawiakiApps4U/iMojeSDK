@@ -1,0 +1,63 @@
+/*
+  Localizable.strings
+  imoje-ios-sdk
+ 
+  Created by K.Kulawiak on 4/28/20.
+*/
+
+// Validate
+"MISSING_MERCHANT_ID" = "Brakujące iMoje merchant id. ";
+"INVALID_MERCHANT_ID" = "Błędne iMoje merchant id. ";
+"MISSING_SERVICE_ID" = "Brakujące iMoje service id. ";
+"INVALID_SERVICE_ID" = "Błędne iMoje service id. ";
+"MISSING_SERVICE_KEY" = "Brakujące iMoje service key. ";
+"INVALID_SERVICE_KEY" = "Błędne iMoje service key. ";
+"MISSING_ACCESS_TOKEN" = "Brakujące iMoje access token. ";
+"INVALID_ACCESS_TOKEN" = "Błędne iMoje access token. ";
+"MISSING_BODY_PAYLOAD" = "Brakujące body payload. ";
+"UNKNOWN_RESPONSE_CODABLE" = "Nie można przetworzyć odpowiedzi. ";
+"VALIDATE_MISSING_FIELD_FMT" = "Brakujące pole `%@`. ";
+"VALIDATE_INVALID_FIELD_FMT" = "Brakujące pole `%@` with reason: %@. ";
+
+// Error
+"UNKNOWN_ERROR" = "Nieznany błąd. ";
+"NO_DATA_ERROR" = "Brak danych w odpowiedzi. ";
+"INVALID_RESPONSE" = "Niepoprawna odpowiedź. ";
+"CANT_CREATE_TRANSACTION_ERROR" = "Nie można zrealizować tranzakcji. ";
+"INACTIVE_SERVICE_ERROR" = "Serwis jest nieaktywny. ";
+"EMPTY_PAYMENT_METHOD_CODE_ERROR" = "Brak kodu płatności. ";
+// Info
+
+"INFO_CREATE_TRANSACTION" = "Tworzenie tranzakcji...";
+"INFO_SUBMIT_TRANSACTION" = "Zatwierdzanie tranzakcji...";
+"INFO_REDIRECT_TRANSACTION" = "Przekierowanie tranzakcji...";
+"INFO_COMPLETED_TRANSACTION" = "Zakończenie tranzakcji...";
+"INFO_CLOSE" = "Zamknij";
+"INFO_ERROR" = "Błąd";
+"INFO_RETRY" = "Ponów";
+"INFO_SUCCESS" = "Sukces";
+"INFO_FAILURE" = "Błąd";
+"INFO_LOAD_SERVICE" = "Ładowanie serwisów...";
+"INFO_GREATER_THAN_ZERO" = "większe niż 0";
+"INFO_INVALID_FORMAT" = "niepoprawny format";
+"INFO_TYPE_NOT_SUPPORTED_FOR_METHOD" = "`%@` typ nie jest wspierany przez metodę `%@`";
+"INFO_TYPE_IS_NOT_SUPPORTED" = "`%@` nie jest wspierane";
+"INFO_METHOD_IS_NOT_SUPPORTED" = "metoda `%@` nie jest wspierana";
+"INFO_UUID_V4_INVALID" = "Text z załącznikami jest nieprawidłowy";
+
+"INFO_AMOUNT" = "Kwota";
+"INFO_ORDER_ID" = "Numer zamówienia";
+"INFO_PAY" = "Zapłać";
+"INFO_CUSTOMER" = "Kupujący";
+"INFO_PAYMENT_FOR" = "Płatność dla";
+
+"INFO_POLICY" = "Oświadczam, że zapoznałem się i akceptuję %@.";
+"INFO_COOKIE" = "Ta witryna używa plików cookies. Pozostając na stronie akceptujesz naszą %@.";
+
+"INFO_REGULAMIN_HYPER_LINK" = "Regulamin imoje";
+"INFO_COOKIE_HYPER_LINK" = "Politykę cookie";
+"INFO_PERSONAL_DATA_HYPER_LINK" = "Informację o danych osobowych imoje";
+
+"INFO_TWISTO_REGULAMIN_HYPER_LINK" = "Regulamin formuły Twisto Pay";
+"INFO_TWISTO_PRIVACY_HYPER_LINK" = "Informację o danych osobowych";
+"INFO_HYPER_LINK_SPLIT" = "oraz";

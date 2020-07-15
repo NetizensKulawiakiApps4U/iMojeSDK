@@ -609,6 +609,7 @@ typedef SWIFT_ENUM(NSInteger, TransactionType, closed) {
 };
 
 
+/// Create payment for twisto method
 SWIFT_CLASS("_TtC8iMojeSDK13TwistoPayment")
 @interface TwistoPayment : CreatePayment
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -632,14 +633,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) iMojeSDK * _
 + (iMojeSDK * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-/// Set sdk language
-/// \param language language code
-///
-- (void)setLanguageWithLanguage:(NSString * _Nonnull)language;
 /// Set sandbox environment for card testing
 /// \param isSandbox indicate use sandbox environment
 ///
 - (void)setSandboxWithIsSandbox:(BOOL)isSandbox;
+/// Set address bar for web view appearance
+/// \param isSandbox If <code>false</code> web view in SDK will not show address bar
+///
+- (void)showAddressBarForWebView:(BOOL)show;
 /// Configure sdk
 /// \param merchantId merchant id
 ///
@@ -760,6 +761,14 @@ typedef SWIFT_ENUM(NSInteger, iMojeSDKError, closed) {
   iMojeSDKErrorUnknown = 5,
 };
 static NSString * _Nonnull const iMojeSDKErrorDomain = @"iMojeSDK.iMojeSDKError";
+
+
+/// View for ING powered view
+SWIFT_CLASS("_TtC8iMojeSDK7ingView")
+@interface ingView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

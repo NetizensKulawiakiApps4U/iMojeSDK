@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'iMojeSDK'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'iMojeSDK'
   s.homepage         = 'https://github.com/NetizensKulawiakiApps4U/iMojeSDK'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -16,9 +16,10 @@ Pod::Spec.new do |s|
   s.public_header_files = 'build/iMojeSDK-Release-iphoneuniversal/iMojeSDK.framework/Headers/*.h'
   s.source_files = 'build/iMojeSDK-Release-iphoneuniversal/iMojeSDK.framework/Headers/*.h'
   s.resources =  [
-      'iMojeSDK/Assets/*.{xcassets}',
-      'iMojeSDK/Assets/Fonts/*.{otf}',
-      'iMojeSDK/Assets/Localizations/**/*.{strings}'
+    'iMojeSDK/Assets/*.{xcassets}',
+    'iMojeSDK/Assets/Fonts/*.{otf}',
+    'iMojeSDK/Assets/Fonts/*.{ttf}',
+    'iMojeSDK/Assets/Localizations/**/*.{strings}'
   ]
   s.frameworks = 'Foundation', 'Security', 'UIKit', 'WebKit'
 end
