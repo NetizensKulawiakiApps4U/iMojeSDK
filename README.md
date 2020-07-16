@@ -8,13 +8,7 @@
 ## Requirements
 
 ### Configure sdk
-1. Use plist
-    1. Add your app's **iMoje.plist** file
-    2. Add a `iMojeSDKMerchantIdentifier` key with a string value of your `merchantId`
-    3. Add a `iMojeSDKServiceIdentifier` key with a string value of your `serviceId` 
-    4. Add `iMojeSDKAccessToken` key with a string value of your `accessToken`
-
-2. Use 
+1. Use 
 ```swift
 func configure(merchantId: String, serviceId: String, serviceKey: String, accessToken: String)
 ```
@@ -25,15 +19,15 @@ imoje-ios-sdk is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```swift
-pod 'iMojeSDK', '0.1.0'
+pod 'iMojeSDK', '0.1.3'
 ```
 
-## Localizable
+## Custom Localizable
 Create file Localizable.strings like in [iMojeSDK](https://github.com/trmquang93/iMojeSDK/blob/master/iMojeSDK/Assets/Localizations/en.lproj/Localizable.strings)
 
 ```swift
 // Change sdk language
-iMojeSDK.sharedInstance.setLanguage(language: "pl")
+iMojeSDK.sharedInstance.setLanguage(language: .custom(languageCode: "de"))
 ```
 
 ## Usage
