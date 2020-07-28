@@ -5,96 +5,98 @@
 [![License](https://img.shields.io/cocoapods/l/iMojeSDK.svg?style=flat)](https://cocoapods.org/pods/iMojeSDK)
 [![Platform](https://img.shields.io/cocoapods/p/iMojeSDK.svg?style=flat)](https://cocoapods.org/pods/iMojeSDK)
 
-## Requirements
-
-### Configure sdk
-1. Use 
-```swift
-func configure(merchantId: String, serviceId: String, serviceKey: String, accessToken: String)
-```
-
 ## Installation
 
 imoje-ios-sdk is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```swift
-pod 'iMojeSDK', '0.1.3'
+pod 'iMojeSDK'
 ```
 
-## Custom Localizable
+## Localizable
 Create file Localizable.strings like in [iMojeSDK](https://github.com/trmquang93/iMojeSDK/blob/master/iMojeSDK/Assets/Localizations/en.lproj/Localizable.strings)
 
 ```swift
 // Change sdk language
-iMojeSDK.sharedInstance.setLanguage(language: .custom(languageCode: "de"))
+iMojeSDK.sharedInstance.setLanguage(language: "pl")
 ```
 
 ## Usage
+- Create new `INGChosePaymentViewController`
 ```swift
-func showCheckout(amount: Int) {
-        let window = UIApplication.shared.windows.first
-        let info = Checkout()
-        info.type = TransactionType.sale
-        info.amount = amount
-        info.currency = "PLN"
-        let uuid = UUID().uuidString
-        switch viewModel.forceResultTransaction {
-        case .success:
-            info.orderId = "TEST SUCCESS SDK-OID-\(uuid)"
-        case .failure:
-            info.orderId = "TEST FAIL SDK-OID-\(uuid)"
-        default:
-            info.orderId = "SDK-OID-\(uuid)"
-        }
-        
-        info.title = "sdk test"
-        info.paymentMethod = self.viewModel.paymnentMethod
-        info.widgetType = viewModel.recurring ? PaymentWidgetType.recurring : PaymentWidgetType.ecom3ds
-        info.paymentFor = "Shop name of customer"
-        let customer = Customer()
-        customer.firstName = self.viewModel.firstName
-        customer.lastName = self.viewModel.lastName
-        customer.email = self.viewModel.email
-        customer.cid = "123"
-        info.customer = customer
-        
-        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
-            PaymentMethodView.appearance().numbersOfColumn = 5
-        }
-        
-        if info.paymentMethod == .twisto {
-            let cartData = CartData(
-                address:
-                CartDataAddress(
-                    billing: Address(
-                        name: "Jan Kowalski",
-                        street: "Warszawska",
-                        city: "Miasto",
-                        postalCode: "00-000",
-                        country: "PL",
-                        phone: "500000000"),
-                    delivery: Address(
-                        name: "Anna Nowak",
-                        street: "Kwietna",
-                        city: "Miasto",
-                        postalCode: "00-000",
-                        country: "PL",
-                        phone: "500000000")),
-                shipping: Cost(name: "Kurier", amount: 15, vat: 23),
-                discount: Cost(name: "Znizka", amount: 19, vat: 23),
-                items: [
-                    Cost(id: "1", quantity: 2, name: "Koszulka", amount: 49.00, vat: 23)
-                ]
-            )
-            info.cartData = cartData
-        }
-        
-        iMojeSDK.sharedInstance.checkout(from: window?.rootViewController, info: info) { (txnId, err) in
-            if let `txnId` = txnId, !txnId.isEmpty {
-                self.recentTransactionViewModel.enqueue(txnId: txnId)
-            }
-        }
+func showChosePaymentButton() {
+    let payments: [INGPaymentMethod] = [
+        .custom(id: "blik", image: .url(imageURL: URL(string: "https://data.imoje.pl/img/pay/blik.png")!), name: "BLIK", details: nil),
+        .custom(id: "pbl", image: .url(imageURL: URL(string: "https://data.imoje.pl/img/pay/pbl.png")!), name: "Pay by link", details: "Lorem ipsum lorem"),
+        .custom(id: "twisto", image: .url(imageURL: URL(string: "https://data.imoje.pl/img/pay/twisto.png")!), name: "Twisto", details: "Lorem ipsum lorem"),
+        .custom(id: "card", image: .url(imageURL: URL(string: "https://data.imoje.pl/img/pay/mastercard.png")!), name: "Pay by card", details: "Lorem ipsum lorem"),
+    ]
+    
+    let viewController = INGChosePaymentViewController(payments: payments)
+    
+    viewController.itemSelected = {[weak self] method in
+        self?.showConfirmView(item: method)
+    }
+    
+    showViewController(viewController, animated: true)
+}
+```
+- Create new `INGConfirmViewController`
+```swift
+func showConfirmView(item: INGPaymentMethod) {
+    var info = INGConfirm(amount: 1000)
+    info.currency = "PLN"
+    let uuid = UUID().uuidString
+    info.orderId = "SDK-OID-\(uuid)"
+    info.title = "some title"
+    info.paymentMethod = INGPaymentMethodType.from(string: item.id)
+    info.paymentFor = """
+    iApps4U Krystian Kulawiak
+    Str Biskupice 63
+    Sieradz 98-200, Poland
+    NIP 8272323448
+    REGON 385961712
+    """
+    var customer = INGConfirm.Customer()
+    customer.firstName = "Jan"
+    customer.lastName = "Kowalski"
+    customer.email = "jkowalski@gmail.com"
+    customer.phone = "512615122"
+    customer.cid = "123"
+    info.customer = customer
+    
+    let confirmViewController = INGConfirmViewController(confirm: info)
+    
+    confirmViewController.callback = {[weak self] in
+        self?.submitPayment(confirm: info)
+    }
+    showViewController(confirmViewController, animated: true)
+}
+```
+- Create `INGBankViewController`
+```swift
+func showBanks(_ banks: [INGBank]) {
+    let banksViewController = INGBankViewController(banks: banks)
+    banksViewController.bankSelected = {[weak self] bank in
+        // Create new transaction with selected bank
+    }
+    showViewController(banksViewController, animated: true)
+}
+```
+- Create `INGWebViewController`
+```swift
+func showWebView(request: URLRequest?, html: String?, baseURL: URL?) {
+    var webViewContent: INGWebViewContent
+    if let request = request {
+        webViewContent = .request(request: request)
+    } else {
+        webViewContent = .html(html: html ?? "", baseURL: baseURL)
+    }
+    let webView = INGWebViewController(content: webViewContent)
+
+    showViewController(webView, animated: true)
+}
 ```
 ## Author
 

@@ -208,215 +208,194 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-/// This object will only appear when it is necessary to redirect the payer to an external link, such as in case of Pay-By-Link payment.
-SWIFT_CLASS("_TtC8iMojeSDK6Action")
-@interface Action : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-/// Action type
-typedef SWIFT_ENUM(NSInteger, ActionType, closed) {
-/// Redirect
-  ActionTypeRedirect = 0,
-/// Unknown type
-  ActionTypeUnknown = 1,
-};
-
-
-/// Customer information
-SWIFT_CLASS("_TtC8iMojeSDK7Address")
-@interface Address : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-/// Billing information
-SWIFT_CLASS("_TtC8iMojeSDK7Billing")
-@interface Billing : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-/// Card information
-SWIFT_CLASS("_TtC8iMojeSDK4Card")
-@interface Card : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-/// Shipping information
-SWIFT_CLASS("_TtC8iMojeSDK8CartData")
-@interface CartData : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-/// Address information
-SWIFT_CLASS("_TtC8iMojeSDK15CartDataAddress")
-@interface CartDataAddress : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-/// Create transaction information
-SWIFT_CLASS("_TtC8iMojeSDK17CreateTransaction")
-@interface CreateTransaction : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-/// Checkout information
-SWIFT_CLASS("_TtC8iMojeSDK8Checkout")
-@interface Checkout : CreateTransaction
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-/// Cost  information
-SWIFT_CLASS("_TtC8iMojeSDK4Cost")
-@interface Cost : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-/// Create payment information
-SWIFT_CLASS("_TtC8iMojeSDK13CreatePayment")
-@interface CreatePayment : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-/// Customer information
-SWIFT_CLASS("_TtC8iMojeSDK8Customer")
-@interface Customer : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-/// Debit payment profile information
-SWIFT_CLASS("_TtC8iMojeSDK19DebitPaymentProfile")
-@interface DebitPaymentProfile : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 /// :nodoc:
-SWIFT_CLASS("_TtC8iMojeSDK14MaxTransaction")
-@interface MaxTransaction : NSObject
+SWIFT_CLASS("_TtC8iMojeSDK7INGBank")
+@interface INGBank : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class NSCoder;
+@class NSBundle;
 
-/// :nodoc:
-SWIFT_CLASS("_TtC8iMojeSDK14MinTransaction")
-@interface MinTransaction : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// View Controller that allows user chooses bank method that he want to payment with
+SWIFT_CLASS("_TtC8iMojeSDK21INGBankViewController")
+@interface INGBankViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 
-/// Payment information
-SWIFT_CLASS("_TtC8iMojeSDK7Payment")
-@interface Payment : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// View  that allows user chooses payment method that he want to payment with
+SWIFT_CLASS("_TtC8iMojeSDK25INGChosePaymentMethodView")
+@interface INGChosePaymentMethodView : UIView
+/// Create new <code>INGChosePaymentMethodView</code>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
-/// :nodoc:
-SWIFT_CLASS("_TtC8iMojeSDK13PaymentMethod")
-@interface PaymentMethod : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+
+
+/// View Controller that allows user chooses payment method that he want to payment with
+SWIFT_CLASS("_TtC8iMojeSDK29INGChosePaymentViewController")
+@interface INGChosePaymentViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+/// View that containts regulamins that user has accept
+SWIFT_CLASS("_TtC8iMojeSDK14INGConfirmView")
+@interface INGConfirmView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+/// View Controller that containts regulamins that user has accept
+SWIFT_CLASS("_TtC8iMojeSDK24INGConfirmViewController")
+@interface INGConfirmViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 /// Payment method code type </br>
 /// See more: https://data.imoje.pl/docs/en/api-transaction_en.pdf#page=14
-typedef SWIFT_ENUM(NSInteger, PaymentMethodCodeType, closed) {
+typedef SWIFT_ENUM(NSInteger, INGPaymentMethodCodeType, closed) {
 /// mTransfer - mBank
-  PaymentMethodCodeTypeMtransfer = 0,
+  INGPaymentMethodCodeTypeMtransfer = 0,
 /// Przelew24
-  PaymentMethodCodeTypeBzwbk = 1,
+  INGPaymentMethodCodeTypeBzwbk = 1,
 /// Pekao24Przelew - Bank Pekao
-  PaymentMethodCodeTypePekao24 = 2,
+  INGPaymentMethodCodeTypePekao24 = 2,
 /// Płacę z Inteligo
-  PaymentMethodCodeTypeInteligo = 3,
+  INGPaymentMethodCodeTypeInteligo = 3,
 /// Płać z iPKO
-  PaymentMethodCodeTypeIpko = 4,
+  INGPaymentMethodCodeTypeIpko = 4,
 /// Płacę z Getin Bank
-  PaymentMethodCodeTypeGetin = 5,
+  INGPaymentMethodCodeTypeGetin = 5,
 /// Płacę z Noble Bank
-  PaymentMethodCodeTypeNoble = 6,
+  INGPaymentMethodCodeTypeNoble = 6,
 /// Płacę z Idea Bank - IdeaBank
-  PaymentMethodCodeTypeIdeabank = 7,
+  INGPaymentMethodCodeTypeIdeabank = 7,
 /// Credit Agricole e-przelew
-  PaymentMethodCodeTypeCreditagricole = 8,
+  INGPaymentMethodCodeTypeCreditagricole = 8,
 /// Płacę z T-mobile Usługi Bankowe dostarczane przez Alior Bank
-  PaymentMethodCodeTypeTmobile = 9,
+  INGPaymentMethodCodeTypeTmobile = 9,
 /// Płacę z Alior Bankiem
-  PaymentMethodCodeTypeAlior = 10,
+  INGPaymentMethodCodeTypeAlior = 10,
 /// Bank Nowy BFG
-  PaymentMethodCodeTypePbs = 11,
+  INGPaymentMethodCodeTypePbs = 11,
 /// Millennium - płatności interneto
-  PaymentMethodCodeTypeMillennium = 12,
+  INGPaymentMethodCodeTypeMillennium = 12,
 /// Przelew z Citi Handlowego
-  PaymentMethodCodeTypeCiti = 13,
+  INGPaymentMethodCodeTypeCiti = 13,
 /// Płać z BOŚ
-  PaymentMethodCodeTypeBos = 14,
+  INGPaymentMethodCodeTypeBos = 14,
 /// Płacę z BGŻ BNP Paribas
-  PaymentMethodCodeTypeBnpparibas = 15,
+  INGPaymentMethodCodeTypeBnpparibas = 15,
 /// Pocztowy24
-  PaymentMethodCodeTypePocztowy = 16,
+  INGPaymentMethodCodeTypePocztowy = 16,
 /// Płacę z Plus Bank
-  PaymentMethodCodeTypePlusbank = 17,
+  INGPaymentMethodCodeTypePlusbank = 17,
 /// Bank Spółdzielczy
-  PaymentMethodCodeTypeBs = 18,
+  INGPaymentMethodCodeTypeBs = 18,
 /// Bank Spółdzielczy w Brodnicy
-  PaymentMethodCodeTypeBspb = 19,
+  INGPaymentMethodCodeTypeBspb = 19,
 /// Envelo Bank
-  PaymentMethodCodeTypeEnvelo = 20,
+  INGPaymentMethodCodeTypeEnvelo = 20,
 /// Euro Bank
-  PaymentMethodCodeTypeEurobank = 21,
+  INGPaymentMethodCodeTypeEurobank = 21,
 /// Deutsche Bank
-  PaymentMethodCodeTypeDeutschebank = 22,
+  INGPaymentMethodCodeTypeDeutschebank = 22,
 /// Raiffeisen Bank Polska
-  PaymentMethodCodeTypeRaiffeisenpolbank = 23,
+  INGPaymentMethodCodeTypeRaiffeisenpolbank = 23,
 /// Orange bank
-  PaymentMethodCodeTypeOrange = 24,
+  INGPaymentMethodCodeTypeOrange = 24,
 /// Bank South Pacific
-  PaymentMethodCodeTypeBspw = 25,
+  INGPaymentMethodCodeTypeBspw = 25,
 /// Nest Bank
-  PaymentMethodCodeTypeNest = 26,
+  INGPaymentMethodCodeTypeNest = 26,
 /// Neobank
-  PaymentMethodCodeTypeNeo = 27,
+  INGPaymentMethodCodeTypeNeo = 27,
 /// Toyota Bank
-  PaymentMethodCodeTypeToyota = 28,
+  INGPaymentMethodCodeTypeToyota = 28,
 /// Płatność kartą 3DS
-  PaymentMethodCodeTypeEcom3ds = 29,
+  INGPaymentMethodCodeTypeEcom3ds = 29,
 /// Płatność za pomocą usługi oneclick
-  PaymentMethodCodeTypeOneclick = 30,
+  INGPaymentMethodCodeTypeOneclick = 30,
 /// Płatność za pomocą usługi recurring
-  PaymentMethodCodeTypeRecurring = 31,
+  INGPaymentMethodCodeTypeRecurring = 31,
 /// blik
-  PaymentMethodCodeTypeBlik = 32,
+  INGPaymentMethodCodeTypeBlik = 32,
 /// ing
-  PaymentMethodCodeTypeIng = 33,
+  INGPaymentMethodCodeTypeIng = 33,
 /// Twisto Bank
-  PaymentMethodCodeTypeTwisto = 34,
+  INGPaymentMethodCodeTypeTwisto = 34,
 /// Unknown type
-  PaymentMethodCodeTypeUnknown = 35,
+  INGPaymentMethodCodeTypeUnknown = 35,
 };
 
+
+/// List payment method code view
+SWIFT_CLASS("_TtC8iMojeSDK20INGPaymentMethodView")
+@interface INGPaymentMethodView : UIView
+/// padding within item
+@property (nonatomic) CGFloat padding;
+/// height of item
+@property (nonatomic) CGFloat itemHeight;
+/// numbers of bank item on row
+@property (nonatomic) NSInteger numbersOfColumn;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+@class UICollectionView;
+@class UICollectionViewLayout;
+
+@interface INGPaymentMethodView (SWIFT_EXTENSION(iMojeSDK)) <UICollectionViewDelegateFlowLayout>
+/// :nodoc:
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+/// :nodoc:
+- (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView shouldSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+/// View for ING powered view
+SWIFT_CLASS("_TtC8iMojeSDK14INGPoweredView")
+@interface INGPoweredView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+/// View  that shows web contents
+SWIFT_CLASS("_TtC8iMojeSDK10INGWebView")
+@interface INGWebView : UIStackView
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+/// View Controller that shows web contents
+SWIFT_CLASS("_TtC8iMojeSDK20INGWebViewController")
+@interface INGWebViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
 @class UIColor;
-@class NSCoder;
 
 /// Payment method code item view
 SWIFT_CLASS("_TtC8iMojeSDK25PaymentMethodCodeViewCell")
@@ -437,183 +416,10 @@ SWIFT_CLASS("_TtC8iMojeSDK25PaymentMethodCodeViewCell")
 @property (nonatomic) CGFloat cornerRadius;
 /// :nodoc:
 - (void)prepareForReuse;
-/// :nodoc:
-@property (nonatomic, getter=isSelected) BOOL selected;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
-/// Payment method type </br>
-/// See more: https://data.imoje.pl/docs/en/api-transaction_en.pdf#page=14
-typedef SWIFT_ENUM(NSInteger, PaymentMethodType, closed) {
-/// Pay-By-Link online transfers.
-  PaymentMethodTypePbl = 0,
-/// Payment by card
-  PaymentMethodTypeCard = 1,
-/// Payment BLIK
-  PaymentMethodTypeBlik = 2,
-/// Pay with ING
-  PaymentMethodTypeIng = 3,
-/// Pay with Twisto
-  PaymentMethodTypeTwisto = 4,
-/// Unknown type
-  PaymentMethodTypeUnknown = 5,
-};
-
-
-/// List payment method code view
-SWIFT_CLASS("_TtC8iMojeSDK17PaymentMethodView")
-@interface PaymentMethodView : UIView
-/// padding within item
-@property (nonatomic) CGFloat padding;
-/// height of item
-@property (nonatomic) CGFloat itemHeight;
-/// numbers of bank item on row
-@property (nonatomic) NSInteger numbersOfColumn;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-@class UICollectionView;
-@class UICollectionViewLayout;
-
-@interface PaymentMethodView (SWIFT_EXTENSION(iMojeSDK)) <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
-/// :nodoc:
-- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-/// :nodoc:
-- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-/// :nodoc:
-- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-/// :nodoc:
-- (void)collectionView:(UICollectionView * _Nonnull)collectionView willDisplayCell:(UICollectionViewCell * _Nonnull)cell forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-/// :nodoc:
-- (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView shouldSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-/// Payment profile information
-SWIFT_CLASS("_TtC8iMojeSDK14PaymentProfile")
-@interface PaymentProfile : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-typedef SWIFT_ENUM(NSInteger, PaymentWidgetType, closed) {
-/// Płatność za pomocą usługi oneclick
-  PaymentWidgetTypeOneclick = 0,
-/// Płatność za pomocą usługi recurring
-  PaymentWidgetTypeRecurring = 1,
-/// Płatność kartą 3DS
-  PaymentWidgetTypeEcom3ds = 2,
-/// Unknown type
-  PaymentWidgetTypeUnknown = 3,
-};
-
-/// Provider status code type </br>
-/// 10.1.1. Provider status codes
-typedef SWIFT_ENUM(NSInteger, ProviderStatusCodeType, closed) {
-/// Payment accepted
-  ProviderStatusCodeTypeAuthorized = 0,
-/// Payment error
-  ProviderStatusCodeTypePaymentError = 1,
-/// Expiration date has expired
-  ProviderStatusCodeTypeCardExpired = 2,
-/// Unknown type
-  ProviderStatusCodeTypeUnknown = 3,
-};
-
-
-/// :nodoc:
-SWIFT_CLASS("_TtC8iMojeSDK7Service")
-@interface Service : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-/// Shipping information
-SWIFT_CLASS("_TtC8iMojeSDK8Shipping")
-@interface Shipping : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-/// Transaction information
-SWIFT_CLASS("_TtC8iMojeSDK11Transaction")
-@interface Transaction : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-/// Transaction action information
-SWIFT_CLASS("_TtC8iMojeSDK17TransactionAction")
-@interface TransactionAction : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-/// :nodoc:
-SWIFT_CLASS("_TtC8iMojeSDK16TransactionLimit")
-@interface TransactionLimit : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-/// Transaction source
-/// See more: https://data.imoje.pl/docs/en/api-transaction_en.pdf#page=17
-typedef SWIFT_ENUM(NSInteger, TransactionSource, closed) {
-/// API
-  TransactionSourceApi = 0,
-/// Web
-  TransactionSourceWeb = 1,
-/// Unknown type
-  TransactionSourceUnknown = 2,
-};
-
-/// Transaction statuses </br>
-/// See more: https://data.imoje.pl/docs/en/api-transaction_en.pdf#page=5
-typedef SWIFT_ENUM(NSInteger, TransactionStatus, closed) {
-/// A new, unhandled transaction
-  TransactionStatusNew = 0,
-/// Transaction authorization
-  TransactionStatusAuthorized = 1,
-/// Waiting for status
-  TransactionStatusPending = 2,
-/// Sent for implementation
-  TransactionStatusSubmitted = 3,
-/// Transaction rejected
-  TransactionStatusRejected = 4,
-/// Transaction completed
-  TransactionStatusSettled = 5,
-/// Transaction error
-  TransactionStatusError = 6,
-/// Transaction canceled
-  TransactionStatusCanceled = 7,
-/// Transaction with unknown status
-  TransactionStatusUnknown = 8,
-};
-
-/// Transaction type
-/// See more: https://data.imoje.pl/docs/en/api-transaction_en.pdf#page=11
-typedef SWIFT_ENUM(NSInteger, TransactionType, closed) {
-/// Sale
-  TransactionTypeSale = 0,
-/// Refund
-  TransactionTypeRefund = 1,
-/// Unknown type
-  TransactionTypeUnknown = 2,
-};
-
-
-/// Create payment for twisto method
-SWIFT_CLASS("_TtC8iMojeSDK13TwistoPayment")
-@interface TwistoPayment : CreatePayment
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
 
 
 
@@ -622,127 +428,14 @@ SWIFT_CLASS("_TtC8iMojeSDK13TwistoPayment")
 
 
 
-
-@class UIViewController;
 
 /// iMojeSDK
 SWIFT_CLASS("_TtC8iMojeSDK8iMojeSDK")
 @interface iMojeSDK : NSObject
-/// share instance imoje sdk
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) iMojeSDK * _Nonnull sharedInstance;)
 + (iMojeSDK * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-/// Set sandbox environment for card testing
-/// \param isSandbox indicate use sandbox environment
-///
-- (void)setSandboxWithIsSandbox:(BOOL)isSandbox;
-/// Set address bar for web view appearance
-/// \param isSandbox If <code>false</code> web view in SDK will not show address bar
-///
-- (void)showAddressBarForWebView:(BOOL)show;
-/// Configure sdk
-/// \param merchantId merchant id
-///
-/// \param serviceId service id
-///
-/// \param serviceKey service key
-///
-/// \param accessToken access token
-///
-- (void)configureWithMerchantId:(NSString * _Nonnull)merchantId serviceId:(NSString * _Nonnull)serviceId serviceKey:(NSString * _Nonnull)serviceKey accessToken:(NSString * _Nonnull)accessToken;
-/// Getting transaction data
-/// \param txnId transaction id
-///
-/// \param completion completion callback <code>OnGetTransactiOnErrorCallback</code>
-///
-- (void)getTransactionWithTxnId:(NSString * _Nonnull)txnId on:(void (^ _Nonnull)(Transaction * _Nullable, NSError * _Nullable))completion;
-/// Creating a new transaction
-/// \param info <code>CreateTransaction</code> information
-///
-/// \param completion completion callback <code>OnCreateTransactiCallback</code>
-///
-- (void)createTransactionWithInfo:(CreateTransaction * _Nonnull)info on:(void (^ _Nonnull)(TransactionAction * _Nullable, NSError * _Nullable))completion;
-/// Create new payment link
-/// \param info <code>CreatePayment</code> information
-///
-/// \param completion completion callback <code>OnCreatePaymentCallback</code>
-///
-- (void)createPaymentWithInfo:(CreatePayment * _Nonnull)info on:(void (^ _Nonnull)(Payment * _Nullable, NSError * _Nullable))completion;
-/// Get payment data
-/// \param pId payment id
-///
-/// \param completion completion callback <code>OnGetPaymentCallback</code>
-///
-- (void)getPaymentWithPId:(NSString * _Nonnull)pId on:(void (^ _Nonnull)(Payment * _Nullable, NSError * _Nullable))completion;
-/// Information about merchant’s services
-/// \param completion completion callback <code>OnGetListServicesCallback</code>
-///
-- (void)getListServicesWithCompletion:(void (^ _Nonnull)(NSArray<Service *> * _Nonnull, NSError * _Nullable))completion;
-/// Information about merchant’s service with defined <code>sId</code> and possible payment methods
-/// \param sId service id
-///
-/// \param completion completion callback <code>OnGetServiceCallback</code>
-///
-- (void)getServiceWithSId:(NSString * _Nonnull)sId on:(void (^ _Nonnull)(Service * _Nullable, NSError * _Nullable))completion;
-/// Debit an existing payment profile
-/// \param info <code>DebitPaymentProfile</code> information
-///
-/// \param completion completion callback <code>OnDebitPaymentProfileCallback</code>
-///
-- (void)debitPaymentProfileWithInfo:(DebitPaymentProfile * _Nonnull)info on:(void (^ _Nonnull)(Transaction * _Nullable, NSError * _Nullable))completion;
-/// Get information about the payment profile with the given <code>pId</code>
-/// \param pId payment profile id
-///
-/// \param completion completion callback <code>OnGetPaymentProfileCallback</code>
-///
-- (void)getPaymentProfileByIdWithPId:(NSString * _Nonnull)pId on:(void (^ _Nonnull)(PaymentProfile * _Nullable, NSError * _Nullable))completion;
-/// Get information about the payment profile with the given <code>cId</code>
-/// \param cId customer id
-///
-/// \param completion completion callback <code>OnGetListPaymentProfilesCallback</code>
-///
-- (void)getListPaymentProfilesByCustomerIdWithCId:(NSString * _Nonnull)cId on:(void (^ _Nonnull)(NSArray<PaymentProfile *> * _Nonnull, NSError * _Nullable))completion;
-/// Deactive the payment profile with the given <code>pId</code>
-/// \param pId payment profile id
-///
-/// \param completion completion callback <code>OnDeactivePaymentProfileCallback</code>
-///
-- (void)deactivePaymentProfileWithIdWithPId:(NSString * _Nonnull)pId on:(void (^ _Nonnull)(PaymentProfile * _Nullable, NSError * _Nullable))completion;
-/// Delete the payment profile with the given <code>pId</code>
-/// \param pId payment profile id
-///
-/// \param completion completion callback <code>OnDeletePaymentProfileCallback</code>
-///
-- (void)deletePaymentProfileWithIdWithPId:(NSString * _Nonnull)pId on:(void (^ _Nonnull)(PaymentProfile * _Nullable, NSError * _Nullable))completion;
-/// Checkout flow
-/// \param from from view controller to open check out flow
-///
-/// \param info <code>Checkout</code> information
-/// </br>Note: <code>serviceId</code>, <code>currency</code>, <code>successReturnURL</code> and <code>failureReturnURl</code> of information will be ignore
-///
-/// \param completion completion callback
-///
-- (void)checkoutFrom:(UIViewController * _Nullable)from info:(Checkout * _Nonnull)info on:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
-/// Get bank icon
-/// \param pmc payment method code
-/// <ul>
-///   <li>
-///     completion: completion callback
-///   </li>
-/// </ul>
-///
-- (void)getBankIconWithPmc:(enum PaymentMethodCodeType)pmc on:(void (^ _Nonnull)(UIImage * _Nullable, NSError * _Nullable))completion;
-/// Add bank list view to superview
-/// \param superView view contains bank list view
-///
-/// \param pm payment method
-///
-/// \param currency currency (default: PLN)
-///
-/// \param completion completion callback
-///
-- (void)addBankListToSuperView:(UIView * _Nonnull)superView pm:(enum PaymentMethodType)pm currency:(NSString * _Nonnull)currency on:(void (^ _Nonnull)(PaymentMethod * _Nullable, NSError * _Nullable))completion;
 @end
 
 /// iMojeSDKError
@@ -761,14 +454,6 @@ typedef SWIFT_ENUM(NSInteger, iMojeSDKError, closed) {
   iMojeSDKErrorUnknown = 5,
 };
 static NSString * _Nonnull const iMojeSDKErrorDomain = @"iMojeSDK.iMojeSDKError";
-
-
-/// View for ING powered view
-SWIFT_CLASS("_TtC8iMojeSDK7ingView")
-@interface ingView : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
