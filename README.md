@@ -23,17 +23,15 @@ iMojeSDK.sharedInstance.setLanguage(language: "pl")
 ```
 
 ## Usage
-- Create new `INGChosePaymentViewController`
+- Create new `INGChosePaymentViewController` with extra payment methods  
 ```swift
 func showChosePaymentButton() {
-    let payments: [INGPaymentMethod] = [
-        .custom(id: "blik", image: .url(imageURL: URL(string: "https://data.imoje.pl/img/pay/blik.png")!), name: "BLIK", details: nil),
-        .custom(id: "pbl", image: .url(imageURL: URL(string: "https://data.imoje.pl/img/pay/pbl.png")!), name: "Pay by link", details: "Lorem ipsum lorem"),
-        .custom(id: "twisto", image: .url(imageURL: URL(string: "https://data.imoje.pl/img/pay/twisto.png")!), name: "Twisto", details: "Lorem ipsum lorem"),
-        .custom(id: "card", image: .url(imageURL: URL(string: "https://data.imoje.pl/img/pay/mastercard.png")!), name: "Pay by card", details: "Lorem ipsum lorem"),
+    let extraPayments: [INGPaymentMethod] = [
+        .custom(id: "visa", image: .named(imageName: "imoje"), name: "Dodatkowy kafelek")
     ]
     
-    let viewController = INGChosePaymentViewController(payments: payments)
+    let viewController = INGChosePaymentViewController(extraPayments: extraPayments)
+    viewController.navigationBarTitle = nil
     
     viewController.itemSelected = {[weak self] method in
         self?.showConfirmView(item: method)
@@ -52,11 +50,8 @@ func showConfirmView(item: INGPaymentMethod) {
     info.title = "some title"
     info.paymentMethod = INGPaymentMethodType.from(string: item.id)
     info.paymentFor = """
-    iApps4U Krystian Kulawiak
-    Str Biskupice 63
-    Sieradz 98-200, Poland
-    NIP 8272323448
-    REGON 385961712
+    Salon Samochodowy Warszawa
+    00-00 Warszawa
     """
     var customer = INGConfirm.Customer()
     customer.firstName = "Jan"
@@ -93,7 +88,25 @@ func showWebView(request: URLRequest?, html: String?, baseURL: URL?) {
     } else {
         webViewContent = .html(html: html ?? "", baseURL: baseURL)
     }
-    let webView = INGWebViewController(content: webViewContent)
+    let webView = INGWebViewController(content: webViewContent, successRedirectURL: "https://test.com/success", failureRedirectURL: "https://test.com/failure")
+    
+    webView.onSuccess = {[weak self] in
+        print("Success")
+        if RootViewController.showViewControllerModally {
+            self?.dismiss(animated: true, completion: nil)
+        } else {
+            self?.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+    webView.onFailure = {[weak self] in
+        print("Failure")
+        if RootViewController.showViewControllerModally {
+            self?.dismiss(animated: true, completion: nil)
+        } else {
+            self?.navigationController?.popToRootViewController(animated: true)
+        }
+    }
 
     showViewController(webView, animated: true)
 }
