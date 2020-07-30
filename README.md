@@ -69,13 +69,17 @@ func showConfirmView(item: INGPaymentMethod) {
     showViewController(confirmViewController, animated: true)
 }
 ```
-- Create `INGBankViewController`
+- Create `INGBankViewController` with custom bank item
 ```swift
-func showBanks(_ banks: [INGBank]) {
-    let banksViewController = INGBankViewController(banks: banks)
+func showBanks(_ banks: [INGBank], confirm: INGConfirm) {
+    let customBank = INGBank(paymentMethod: .custom(code: "Custom"), paymentMethodCode: .custom(code: "custom", image: .url(imageURL: URL(string: "https://www.interest.co.nz/sites/default/files/feature_images/bank-3_0_0_0.jpg")!), name: "Custom Bank"), isActive: true, isOnline: false, currency: "PLN")
+    
+    let banksViewController = INGBankViewController(banks: banks + [customBank])
     banksViewController.bankSelected = {[weak self] bank in
-        // Create new transaction with selected bank
+        self?.createTransaction(with: bank, confirm: confirm)
     }
+    banksViewController.navigationBarTitle = nil
+    banksViewController.numbersOfColumn = 3
     showViewController(banksViewController, animated: true)
 }
 ```
