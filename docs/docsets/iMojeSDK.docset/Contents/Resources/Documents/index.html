@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           iMojeSDK 0.1.0 Docs
         </a>
-         (73% documented)
+         (84% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -47,19 +47,25 @@
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/ChosePaymentMethodView.html">ChosePaymentMethodView</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/ConfirmView.html">ConfirmView</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/INGBankViewController.html">INGBankViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/INGChosePaymentMethodView.html">INGChosePaymentMethodView</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/INGChosePaymentViewController.html">INGChosePaymentViewController</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/INGConfirmView.html">INGConfirmView</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/INGConfirmViewController.html">INGConfirmViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/INGPaymentMethodView.html">INGPaymentMethodView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/INGPoweredView.html">INGPoweredView</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/INGWebView.html">INGWebView</a>
@@ -71,13 +77,7 @@
                 <a class="nav-group-task-link" href="Classes/PaymentMethodCodeViewCell.html">PaymentMethodCodeViewCell</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/PaymentMethodView.html">PaymentMethodView</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/iMojeSDK.html">iMojeSDK</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes.html#/c:@M@iMojeSDK@objc(cs)ingView">ingView</a>
               </li>
             </ul>
           </li>
@@ -91,10 +91,16 @@
                 <a class="nav-group-task-link" href="Enums/INGPaymentMethodCodeType.html">INGPaymentMethodCodeType</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/INGPaymentMethodCodeType/Image.html">– Image</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/INGPaymentMethodImage.html">INGPaymentMethodImage</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/INGPaymentMethodType.html">INGPaymentMethodType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/INGPaymentStandardMethodImage.html">INGPaymentStandardMethodImage</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/INGWebViewContent.html">INGWebViewContent</a>
@@ -207,6 +213,98 @@ it, simply add the following line to your Podfile:</p>
 <pre class="highlight swift"><code><span class="c1">// Change sdk language</span>
 <span class="n">iMojeSDK</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">setLanguage</span><span class="p">(</span><span class="nv">language</span><span class="p">:</span> <span class="s">"pl"</span><span class="p">)</span>
 </code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<ul>
+<li><p>Create new <code><a href="Classes/INGChosePaymentViewController.html">INGChosePaymentViewController</a></code> with extra payment methods  </p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">showChosePaymentButton</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">let</span> <span class="nv">extraPayments</span><span class="p">:</span> <span class="p">[</span><span class="kt">INGPaymentMethod</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="o">.</span><span class="nf">custom</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"visa"</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="o">.</span><span class="nf">named</span><span class="p">(</span><span class="nv">imageName</span><span class="p">:</span> <span class="s">"imoje"</span><span class="p">),</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"Dodatkowy kafelek"</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="k">let</span> <span class="nv">viewController</span> <span class="o">=</span> <span class="kt">INGChosePaymentViewController</span><span class="p">(</span><span class="nv">extraPayments</span><span class="p">:</span> <span class="n">extraPayments</span><span class="p">)</span>
+<span class="n">viewController</span><span class="o">.</span><span class="n">navigationBarTitle</span> <span class="o">=</span> <span class="kc">nil</span>
+
+<span class="n">viewController</span><span class="o">.</span><span class="n">itemSelected</span> <span class="o">=</span> <span class="p">{[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">method</span> <span class="k">in</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">showConfirmView</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="n">method</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nf">showViewController</span><span class="p">(</span><span class="n">viewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></li>
+<li><p>Create new <code><a href="Classes/INGConfirmViewController.html">INGConfirmViewController</a></code></p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">showConfirmView</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt">INGPaymentMethod</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">var</span> <span class="nv">info</span> <span class="o">=</span> <span class="kt">INGConfirm</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">info</span><span class="o">.</span><span class="n">currency</span> <span class="o">=</span> <span class="s">"PLN"</span>
+<span class="k">let</span> <span class="nv">uuid</span> <span class="o">=</span> <span class="kt">UUID</span><span class="p">()</span><span class="o">.</span><span class="n">uuidString</span>
+<span class="n">info</span><span class="o">.</span><span class="n">orderId</span> <span class="o">=</span> <span class="s">"SDK-OID-</span><span class="se">\(</span><span class="n">uuid</span><span class="se">)</span><span class="s">"</span>
+<span class="n">info</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s">"some title"</span>
+<span class="n">info</span><span class="o">.</span><span class="n">paymentMethod</span> <span class="o">=</span> <span class="kt">INGPaymentMethodType</span><span class="o">.</span><span class="nf">from</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">info</span><span class="o">.</span><span class="n">paymentFor</span> <span class="o">=</span> <span class="s">"""
+Salon Samochodowy Warszawa
+00-00 Warszawa
+"""</span>
+<span class="k">var</span> <span class="nv">customer</span> <span class="o">=</span> <span class="kt">INGConfirm</span><span class="o">.</span><span class="kt">Customer</span><span class="p">()</span>
+<span class="n">customer</span><span class="o">.</span><span class="n">firstName</span> <span class="o">=</span> <span class="s">"Jan"</span>
+<span class="n">customer</span><span class="o">.</span><span class="n">lastName</span> <span class="o">=</span> <span class="s">"Kowalski"</span>
+<span class="n">customer</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="s">"jkowalski@gmail.com"</span>
+<span class="n">customer</span><span class="o">.</span><span class="n">phone</span> <span class="o">=</span> <span class="s">"512615122"</span>
+<span class="n">customer</span><span class="o">.</span><span class="n">cid</span> <span class="o">=</span> <span class="s">"123"</span>
+<span class="n">info</span><span class="o">.</span><span class="n">customer</span> <span class="o">=</span> <span class="n">customer</span>
+
+<span class="k">let</span> <span class="nv">confirmViewController</span> <span class="o">=</span> <span class="kt">INGConfirmViewController</span><span class="p">(</span><span class="nv">confirm</span><span class="p">:</span> <span class="n">info</span><span class="p">)</span>
+
+<span class="n">confirmViewController</span><span class="o">.</span><span class="n">callback</span> <span class="o">=</span> <span class="p">{[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">submitPayment</span><span class="p">(</span><span class="nv">confirm</span><span class="p">:</span> <span class="n">info</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nf">showViewController</span><span class="p">(</span><span class="n">confirmViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></li>
+<li><p>Create <code><a href="Classes/INGBankViewController.html">INGBankViewController</a></code> with custom bank item</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">showBanks</span><span class="p">(</span><span class="n">_</span> <span class="nv">banks</span><span class="p">:</span> <span class="p">[</span><span class="kt">INGBank</span><span class="p">],</span> <span class="nv">confirm</span><span class="p">:</span> <span class="kt">INGConfirm</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">let</span> <span class="nv">customBank</span> <span class="o">=</span> <span class="kt">INGBank</span><span class="p">(</span><span class="nv">paymentMethod</span><span class="p">:</span> <span class="o">.</span><span class="nf">custom</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="s">"Custom"</span><span class="p">),</span> <span class="nv">paymentMethodCode</span><span class="p">:</span> <span class="o">.</span><span class="nf">custom</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="s">"custom"</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://www.interest.co.nz/sites/default/files/feature_images/bank-3_0_0_0.jpg"</span><span class="p">)</span><span class="o">!</span><span class="p">),</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"Custom Bank"</span><span class="p">),</span> <span class="nv">isActive</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">isOnline</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">currency</span><span class="p">:</span> <span class="s">"PLN"</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">banksViewController</span> <span class="o">=</span> <span class="kt">INGBankViewController</span><span class="p">(</span><span class="nv">banks</span><span class="p">:</span> <span class="n">banks</span> <span class="o">+</span> <span class="p">[</span><span class="n">customBank</span><span class="p">])</span>
+<span class="n">banksViewController</span><span class="o">.</span><span class="n">bankSelected</span> <span class="o">=</span> <span class="p">{[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">bank</span> <span class="k">in</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">createTransaction</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">bank</span><span class="p">,</span> <span class="nv">confirm</span><span class="p">:</span> <span class="n">confirm</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">banksViewController</span><span class="o">.</span><span class="n">navigationBarTitle</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="n">banksViewController</span><span class="o">.</span><span class="n">numbersOfColumn</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nf">showViewController</span><span class="p">(</span><span class="n">banksViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></li>
+<li><p>Create <code><a href="Classes/INGWebViewController.html">INGWebViewController</a></code></p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">showWebView</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">?,</span> <span class="nv">html</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">baseURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?)</span> <span class="p">{</span>
+<span class="k">var</span> <span class="nv">webViewContent</span><span class="p">:</span> <span class="kt">INGWebViewContent</span>
+<span class="k">if</span> <span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="n">request</span> <span class="p">{</span>
+    <span class="n">webViewContent</span> <span class="o">=</span> <span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">webViewContent</span> <span class="o">=</span> <span class="o">.</span><span class="nf">html</span><span class="p">(</span><span class="nv">html</span><span class="p">:</span> <span class="n">html</span> <span class="p">??</span> <span class="s">""</span><span class="p">,</span> <span class="nv">baseURL</span><span class="p">:</span> <span class="n">baseURL</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">let</span> <span class="nv">webView</span> <span class="o">=</span> <span class="kt">INGWebViewController</span><span class="p">(</span><span class="nv">content</span><span class="p">:</span> <span class="n">webViewContent</span><span class="p">,</span> <span class="nv">successRedirectURL</span><span class="p">:</span> <span class="s">"https://test.com/success"</span><span class="p">,</span> <span class="nv">failureRedirectURL</span><span class="p">:</span> <span class="s">"https://test.com/failure"</span><span class="p">)</span>
+
+<span class="n">webView</span><span class="o">.</span><span class="n">onSuccess</span> <span class="o">=</span> <span class="p">{[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Success"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="kt">RootViewController</span><span class="o">.</span><span class="n">showViewControllerModally</span> <span class="p">{</span>
+        <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="nf">popToRootViewController</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">webView</span><span class="o">.</span><span class="n">onFailure</span> <span class="o">=</span> <span class="p">{[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Failure"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="kt">RootViewController</span><span class="o">.</span><span class="n">showViewControllerModally</span> <span class="p">{</span>
+        <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="nf">popToRootViewController</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nf">showViewController</span><span class="p">(</span><span class="n">webView</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></li>
+</ul>
 <h2 id='author' class='heading'>Author</h2>
 
 <p>Netizens, <a href="mailto:biuro@netizens.pl">biuro@netizens.pl</a></p>
@@ -221,7 +319,7 @@ it, simply add the following line to your Podfile:</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://git.netizens.pl/imoje" target="_blank" rel="external">Netizens <a href="mailto:biuro@netizens.pl">biuro@netizens.pl</a></a>. All rights reserved. (Last updated: 2020-07-28)</p>
+      <p>&copy; 2020 <a class="link" href="https://git.netizens.pl/imoje" target="_blank" rel="external">Netizens <a href="mailto:biuro@netizens.pl">biuro@netizens.pl</a></a>. All rights reserved. (Last updated: 2020-07-30)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

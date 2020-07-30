@@ -1,306 +1,215 @@
 {
   "warnings": [
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Common/ArrayExt.swift",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Common/ArrayExt.swift",
       "line": 11,
       "symbol": "Array.subscript(safe:)",
       "symbol_kind": "source.lang.swift.decl.function.subscript",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Common/ConstPriv.swift",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Common/ConstPriv.swift",
       "line": 10,
       "symbol": "UIImage.init(imoje:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Common/INGFont.swift",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Common/INGFont.swift",
       "line": 34,
       "symbol": "INGFontStyle.font",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Common/StringExt.swift",
-      "line": 13,
-      "symbol": "String.sha256()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Model/INGPaymentMethodCodeType.swift",
+      "line": 135,
+      "symbol": "INGPaymentMethodCodeType.Image.url(imageURL:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 10,
-      "symbol": "INGConfirm",
-      "symbol_kind": "source.lang.swift.decl.struct",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Model/INGPaymentMethodCodeType.swift",
+      "line": 136,
+      "symbol": "INGPaymentMethodCodeType.Image.named(imageName:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 11,
-      "symbol": "INGConfirm.amount",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 12,
-      "symbol": "INGConfirm.title",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 13,
-      "symbol": "INGConfirm.currency",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 14,
-      "symbol": "INGConfirm.orderId",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 15,
-      "symbol": "INGConfirm.customer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 16,
-      "symbol": "INGConfirm.paymentMethod",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 17,
-      "symbol": "INGConfirm.paymentFor",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 19,
-      "symbol": "INGConfirm.init(amount:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 24,
-      "symbol": "INGConfirm",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 25,
-      "symbol": "INGConfirm.Customer",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 26,
-      "symbol": "INGConfirm.Customer.email",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 27,
-      "symbol": "INGConfirm.Customer.firstName",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 28,
-      "symbol": "INGConfirm.Customer.lastName",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 29,
-      "symbol": "INGConfirm.Customer.phone",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 30,
-      "symbol": "INGConfirm.Customer.cid",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 32,
-      "symbol": "INGConfirm.Customer.fullName",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGConfirm.swift",
-      "line": 34,
-      "symbol": "INGConfirm.Customer.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGPaymentMethodCodeType.swift",
-      "line": 212,
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Model/INGPaymentMethodCodeType.swift",
+      "line": 226,
       "symbol": "INGPaymentMethodCodeType.from(string:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGPaymentMethodType.swift",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Model/INGPaymentMethodType.swift",
       "line": 62,
       "symbol": "INGPaymentMethodType.from(string:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGWebViewContent.swift",
-      "line": 10,
-      "symbol": "INGWebViewContent",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGWebViewContent.swift",
-      "line": 11,
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Model/INGWebViewContent.swift",
+      "line": 12,
       "symbol": "INGWebViewContent.request(request:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/INGWebViewContent.swift",
-      "line": 12,
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Model/INGWebViewContent.swift",
+      "line": 13,
       "symbol": "INGWebViewContent.html(html:baseURL:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Model/SDKStandardLanguageType.swift",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Model/SDKStandardLanguageType.swift",
       "line": 23,
       "symbol": "SDKStandardLanguageType.languageCode",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/Presenter/INGBankViewController.swift",
-      "line": 65,
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/Presenter/INGBankViewController.swift",
+      "line": 79,
       "symbol": "INGBankViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/Presenter/INGChosePaymentViewController.swift",
-      "line": 55,
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/Presenter/INGChosePaymentViewController.swift",
+      "line": 62,
       "symbol": "INGChosePaymentViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/Presenter/INGConfirmViewController.swift",
-      "line": 33,
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/Presenter/INGConfirmViewController.swift",
+      "line": 41,
       "symbol": "INGConfirmViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/Presenter/INGWebViewController.swift",
-      "line": 52,
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/Presenter/INGWebViewController.swift",
+      "line": 82,
       "symbol": "INGWebViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/ChosePaymentMethodView.swift",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
       "line": 14,
       "symbol": "ChosePaymentMethodViewItemSelected",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/ChosePaymentMethodView.swift",
-      "line": 153,
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
+      "line": 198,
       "symbol": "INGPaymentMethodImage.url(imageURL:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/ChosePaymentMethodView.swift",
-      "line": 154,
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
+      "line": 199,
       "symbol": "INGPaymentMethodImage.named(imageName:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/ConfirmView.swift",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
+      "line": 200,
+      "symbol": "INGPaymentMethodImage.standard(type:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
+      "line": 205,
+      "symbol": "INGPaymentStandardMethodImage.blik",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
+      "line": 206,
+      "symbol": "INGPaymentStandardMethodImage.pbl",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
+      "line": 207,
+      "symbol": "INGPaymentStandardMethodImage.twisto",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
+      "line": 208,
+      "symbol": "INGPaymentStandardMethodImage.visa",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
+      "line": 209,
+      "symbol": "INGPaymentStandardMethodImage.masterCard",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGConfirmView.swift",
       "line": 11,
       "symbol": "ConfirmViewCallback",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/ConfirmView.swift",
-      "line": 45,
-      "symbol": "ConfirmView",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/ConfirmView.swift",
-      "line": 46,
-      "symbol": "ConfirmView.callback",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGPaymentMethodView.swift",
+      "line": 31,
+      "symbol": "INGPaymentMethodView.methods",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/ConfirmView.swift",
-      "line": 48,
-      "symbol": "ConfirmView.confirm",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGPaymentMethodView.swift",
+      "line": 80,
+      "symbol": "INGPaymentMethodView.methodSelected",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/ConfirmView.swift",
-      "line": 55,
-      "symbol": "ConfirmView.init(confirm:)",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGPaymentMethodView.swift",
+      "line": 89,
+      "symbol": "INGPaymentMethodView.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/PaymentMethodView.swift",
-      "line": 24,
-      "symbol": "PaymentMethodView.methods",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGPoweredView.swift",
+      "line": 87,
+      "symbol": "INGPoweredView.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/PaymentMethodView.swift",
-      "line": 62,
-      "symbol": "PaymentMethodView.methodSelected",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGWebView.swift",
+      "line": 144,
+      "symbol": "INGWebView.webView(_:decidePolicyFor:decisionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios/iMojeSDK/Classes/iMojeSDK.swift",
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/iMojeSDK.swift",
       "line": 14,
       "symbol": "iMojeSDK.sharedInstance",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/quangtran/Documents/Projects/imoje/imoje-sdk-ios"
+  "source_directory": "/Users/krystiankulawiak/imoje-sdk-ios"
 }

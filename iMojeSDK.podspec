@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'iMojeSDK'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'iMojeSDK'
   s.homepage         = 'https://github.com/NetizensKulawiakiApps4U/iMojeSDK'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/NetizensKulawiakiApps4U/iMojeSDK.git', :tag => s.version.to_s }
   s.subspec 'iMojeSDKSubSpec' do |sub_spec|
     sub_spec.dependency 'Alamofire', '4.9.1'
+    sub_spec.dependency 'AlamofireImage', '3.6.0'
     sub_spec.dependency 'RxSwift', '5.1.1'
     sub_spec.dependency 'RxCocoa', '5.1.1'
   end
