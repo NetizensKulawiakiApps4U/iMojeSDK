@@ -62,5 +62,13 @@
 "INFO_TWISTO_PRIVACY_HYPER_LINK" = "Twisto privacy information";
 
 "INFO_HYPER_LINK_SPLIT" = "and";
+"INFO_CHOSE_PAYMENT_TITLE" = "Select payment method";
 
-"INFO_IMOJE_POWERED" = "Powered by";
+"INFO_BANKS_VIEW_TITLE" = "Banks";
+"INFO_POWERD_BY" = "Powered by";
+"INFO_CHOSE_BANK_TITLELABEL" = "Choose your bank";
+
+"INFO_PAYMENT_METHOD_PBL" = "Pay by link";
+"INFO_PAYMENT_METHOD_BLIK" = "BLIK";
+"INFO_PAYMENT_METHOD_TWISTO" = "Twisto";
+"INFO_PAYMENT_METHOD_CARD" = "Pay by card";

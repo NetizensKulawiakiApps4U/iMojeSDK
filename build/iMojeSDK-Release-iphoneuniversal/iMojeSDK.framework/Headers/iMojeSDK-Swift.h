@@ -190,6 +190,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
+@import WebKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -264,83 +265,6 @@ SWIFT_CLASS("_TtC8iMojeSDK24INGConfirmViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-/// Payment method code type </br>
-/// See more: https://data.imoje.pl/docs/en/api-transaction_en.pdf#page=14
-typedef SWIFT_ENUM(NSInteger, INGPaymentMethodCodeType, closed) {
-/// mTransfer - mBank
-  INGPaymentMethodCodeTypeMtransfer = 0,
-/// Przelew24
-  INGPaymentMethodCodeTypeBzwbk = 1,
-/// Pekao24Przelew - Bank Pekao
-  INGPaymentMethodCodeTypePekao24 = 2,
-/// Płacę z Inteligo
-  INGPaymentMethodCodeTypeInteligo = 3,
-/// Płać z iPKO
-  INGPaymentMethodCodeTypeIpko = 4,
-/// Płacę z Getin Bank
-  INGPaymentMethodCodeTypeGetin = 5,
-/// Płacę z Noble Bank
-  INGPaymentMethodCodeTypeNoble = 6,
-/// Płacę z Idea Bank - IdeaBank
-  INGPaymentMethodCodeTypeIdeabank = 7,
-/// Credit Agricole e-przelew
-  INGPaymentMethodCodeTypeCreditagricole = 8,
-/// Płacę z T-mobile Usługi Bankowe dostarczane przez Alior Bank
-  INGPaymentMethodCodeTypeTmobile = 9,
-/// Płacę z Alior Bankiem
-  INGPaymentMethodCodeTypeAlior = 10,
-/// Bank Nowy BFG
-  INGPaymentMethodCodeTypePbs = 11,
-/// Millennium - płatności interneto
-  INGPaymentMethodCodeTypeMillennium = 12,
-/// Przelew z Citi Handlowego
-  INGPaymentMethodCodeTypeCiti = 13,
-/// Płać z BOŚ
-  INGPaymentMethodCodeTypeBos = 14,
-/// Płacę z BGŻ BNP Paribas
-  INGPaymentMethodCodeTypeBnpparibas = 15,
-/// Pocztowy24
-  INGPaymentMethodCodeTypePocztowy = 16,
-/// Płacę z Plus Bank
-  INGPaymentMethodCodeTypePlusbank = 17,
-/// Bank Spółdzielczy
-  INGPaymentMethodCodeTypeBs = 18,
-/// Bank Spółdzielczy w Brodnicy
-  INGPaymentMethodCodeTypeBspb = 19,
-/// Envelo Bank
-  INGPaymentMethodCodeTypeEnvelo = 20,
-/// Euro Bank
-  INGPaymentMethodCodeTypeEurobank = 21,
-/// Deutsche Bank
-  INGPaymentMethodCodeTypeDeutschebank = 22,
-/// Raiffeisen Bank Polska
-  INGPaymentMethodCodeTypeRaiffeisenpolbank = 23,
-/// Orange bank
-  INGPaymentMethodCodeTypeOrange = 24,
-/// Bank South Pacific
-  INGPaymentMethodCodeTypeBspw = 25,
-/// Nest Bank
-  INGPaymentMethodCodeTypeNest = 26,
-/// Neobank
-  INGPaymentMethodCodeTypeNeo = 27,
-/// Toyota Bank
-  INGPaymentMethodCodeTypeToyota = 28,
-/// Płatność kartą 3DS
-  INGPaymentMethodCodeTypeEcom3ds = 29,
-/// Płatność za pomocą usługi oneclick
-  INGPaymentMethodCodeTypeOneclick = 30,
-/// Płatność za pomocą usługi recurring
-  INGPaymentMethodCodeTypeRecurring = 31,
-/// blik
-  INGPaymentMethodCodeTypeBlik = 32,
-/// ing
-  INGPaymentMethodCodeTypeIng = 33,
-/// Twisto Bank
-  INGPaymentMethodCodeTypeTwisto = 34,
-/// Unknown type
-  INGPaymentMethodCodeTypeUnknown = 35,
-};
-
 
 /// List payment method code view
 SWIFT_CLASS("_TtC8iMojeSDK20INGPaymentMethodView")
@@ -378,10 +302,15 @@ SWIFT_CLASS("_TtC8iMojeSDK14INGPoweredView")
 /// View  that shows web contents
 SWIFT_CLASS("_TtC8iMojeSDK10INGWebView")
 @interface INGWebView : UIStackView
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+@class WKWebView;
+@class WKNavigationAction;
+
+@interface INGWebView (SWIFT_EXTENSION(iMojeSDK)) <WKNavigationDelegate>
+- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
 @end
 
 

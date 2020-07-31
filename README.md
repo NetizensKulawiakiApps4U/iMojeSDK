@@ -26,11 +26,11 @@ iMojeSDK.sharedInstance.setLanguage(language: "pl")
 - Create new `INGChosePaymentViewController` with extra payment methods  
 ```swift
 func showChosePaymentButton() {
-    let extraPayments: [INGPaymentMethod] = [
+    let customPayments: [INGPaymentMethod] = [
         .custom(id: "visa", image: .named(imageName: "imoje"), name: "Dodatkowy kafelek")
     ]
     
-    let viewController = INGChosePaymentViewController(extraPayments: extraPayments)
+    let viewController = INGChosePaymentViewController(customItems: customPayments)
     viewController.navigationBarTitle = nil
     
     viewController.itemSelected = {[weak self] method in
@@ -39,6 +39,10 @@ func showChosePaymentButton() {
     
     showViewController(viewController, animated: true)
 }
+```
+- Retrive standard id Payment Method  `INGPaymentMethodType`
+```swift
+    INGPaymentMethodType.from(string: item.id)
 ```
 - Create new `INGConfirmViewController`
 ```swift

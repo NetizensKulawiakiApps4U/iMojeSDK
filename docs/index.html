@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          iMojeSDK 0.1.0 Docs
+          iMojeSDK 0.1.4 Docs
         </a>
          (84% documented)
       </p>
@@ -186,14 +186,6 @@
 <li>Install <a href="https://github.com/realm/jazzy">jazzy</a></li>
 <li>Run <code>jazzy</code></li>
 </ol>
-<h3 id='configure-sdk' class='heading'>Configure sdk</h3>
-
-<ol>
-<li><p>Use plist</p>
-
-<p>Add your app&rsquo;s iMoje.plist file, add a <code>iMojeSDKMerchantIdentifier</code> key with a string value of your <code>merchantId</code>, add a <code>iMojeSDKServiceIdentifier</code> key with a string value of your <code>serviceId</code> and <code>iMojeSDKAccessToken</code> key with a string value of your <code>accessToken</code></p></li>
-<li><p>Use <code>func configure(merchantId: String, serviceId: String, serviceKey: String, accessToken: String)</code></p></li>
-</ol>
 <h2 id='installation' class='heading'>Installation</h2>
 
 <p>imoje-ios-sdk is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
@@ -205,24 +197,24 @@ it, simply add the following line to your Podfile:</p>
 <span class="n">pod</span> <span class="s1">'iMojeSDK'</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s1">'../imoje-sdk-ios/iMojeSDK.podspec'</span>
 
 <span class="c1"># public</span>
-<span class="n">pod</span> <span class="s1">'iMojeSDK'</span><span class="p">,</span> <span class="s1">'0.1.0'</span>
+<span class="n">pod</span> <span class="s1">'iMojeSDK'</span><span class="p">,</span> <span class="s1">'0.1.4'</span>
 </code></pre>
 <h2 id='localizable' class='heading'>Localizable</h2>
 
 <p>Create file Localizable.strings like in <a href="https://git.netizens.pl/imoje/imoje-app-ios/-/tree/develop/iMoje/Localizations/pl.lproj/Localizable.strings">iMojeAppTest</a></p>
 <pre class="highlight swift"><code><span class="c1">// Change sdk language</span>
-<span class="n">iMojeSDK</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">setLanguage</span><span class="p">(</span><span class="nv">language</span><span class="p">:</span> <span class="s">"pl"</span><span class="p">)</span>
+<span class="n">iMojeSDK</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">setLanguage</span><span class="p">(</span><span class="nv">language</span><span class="p">:</span> <span class="o">.</span><span class="n">pl</span><span class="p">)</span>
 </code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
 
 <ul>
 <li><p>Create new <code><a href="Classes/INGChosePaymentViewController.html">INGChosePaymentViewController</a></code> with extra payment methods  </p>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">showChosePaymentButton</span><span class="p">()</span> <span class="p">{</span>
-<span class="k">let</span> <span class="nv">extraPayments</span><span class="p">:</span> <span class="p">[</span><span class="kt">INGPaymentMethod</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+<span class="k">let</span> <span class="nv">customPayments</span><span class="p">:</span> <span class="p">[</span><span class="kt">INGPaymentMethod</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
     <span class="o">.</span><span class="nf">custom</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"visa"</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="o">.</span><span class="nf">named</span><span class="p">(</span><span class="nv">imageName</span><span class="p">:</span> <span class="s">"imoje"</span><span class="p">),</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"Dodatkowy kafelek"</span><span class="p">)</span>
 <span class="p">]</span>
 
-<span class="k">let</span> <span class="nv">viewController</span> <span class="o">=</span> <span class="kt">INGChosePaymentViewController</span><span class="p">(</span><span class="nv">extraPayments</span><span class="p">:</span> <span class="n">extraPayments</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">viewController</span> <span class="o">=</span> <span class="kt">INGChosePaymentViewController</span><span class="p">(</span><span class="nv">customItems</span><span class="p">:</span> <span class="n">customPayments</span><span class="p">)</span>
 <span class="n">viewController</span><span class="o">.</span><span class="n">navigationBarTitle</span> <span class="o">=</span> <span class="kc">nil</span>
 
 <span class="n">viewController</span><span class="o">.</span><span class="n">itemSelected</span> <span class="o">=</span> <span class="p">{[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">method</span> <span class="k">in</span>
@@ -231,6 +223,9 @@ it, simply add the following line to your Podfile:</p>
 
 <span class="nf">showViewController</span><span class="p">(</span><span class="n">viewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
 <span class="p">}</span>
+</code></pre></li>
+<li><p>Retrive standard id Payment Method  <code><a href="Enums/INGPaymentMethodType.html">INGPaymentMethodType</a></code></p>
+<pre class="highlight swift"><code><span class="kt">INGPaymentMethodType</span><span class="o">.</span><span class="nf">from</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">item</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </code></pre></li>
 <li><p>Create new <code><a href="Classes/INGConfirmViewController.html">INGConfirmViewController</a></code></p>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">showConfirmView</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt">INGPaymentMethod</span><span class="p">)</span> <span class="p">{</span>
@@ -319,7 +314,7 @@ Salon Samochodowy Warszawa
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://git.netizens.pl/imoje" target="_blank" rel="external">Netizens <a href="mailto:biuro@netizens.pl">biuro@netizens.pl</a></a>. All rights reserved. (Last updated: 2020-07-30)</p>
+      <p>&copy; 2020 <a class="link" href="https://git.netizens.pl/imoje" target="_blank" rel="external">Netizens <a href="mailto:biuro@netizens.pl">biuro@netizens.pl</a></a>. All rights reserved. (Last updated: 2020-07-31)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

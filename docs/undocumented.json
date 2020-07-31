@@ -79,7 +79,7 @@
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/Presenter/INGChosePaymentViewController.swift",
-      "line": 62,
+      "line": 66,
       "symbol": "INGChosePaymentViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -107,56 +107,63 @@
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 198,
+      "line": 212,
       "symbol": "INGPaymentMethodImage.url(imageURL:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 199,
+      "line": 213,
       "symbol": "INGPaymentMethodImage.named(imageName:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 200,
+      "line": 214,
       "symbol": "INGPaymentMethodImage.standard(type:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 205,
+      "line": 219,
       "symbol": "INGPaymentStandardMethodImage.blik",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 206,
+      "line": 220,
       "symbol": "INGPaymentStandardMethodImage.pbl",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 207,
+      "line": 221,
       "symbol": "INGPaymentStandardMethodImage.twisto",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 208,
+      "line": 222,
+      "symbol": "INGPaymentStandardMethodImage.card",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
+      "line": 223,
       "symbol": "INGPaymentStandardMethodImage.visa",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 209,
+      "line": 224,
       "symbol": "INGPaymentStandardMethodImage.masterCard",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
