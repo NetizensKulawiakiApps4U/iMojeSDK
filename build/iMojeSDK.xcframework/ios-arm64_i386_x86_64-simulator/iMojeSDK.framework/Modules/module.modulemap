@@ -1,0 +1,11 @@
+framework module iMojeSDK {
+  umbrella header "iMojeSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module iMojeSDK.Swift {
+    header "iMojeSDK-Swift.h"
+    requires objc
+}
