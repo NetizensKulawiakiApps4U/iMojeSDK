@@ -19,7 +19,7 @@ Create file Localizable.strings like in [iMojeSDK](https://github.com/trmquang93
 
 ```swift
 // Change sdk language
-iMojeSDK.sharedInstance.setLanguage(language: "pl")
+iMoje.sharedInstance.setLanguage(language: "pl")
 ```
 
 ## Usage
