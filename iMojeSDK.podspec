@@ -11,9 +11,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.ios.vendored_frameworks = 'build/iMojeSDK.xcframework'
   
-  s.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
-  s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
-  
   s.resources =  [
     'iMojeSDK/Assets/*.{xcassets}',
     'iMojeSDK/Assets/Fonts/*.{otf}',
@@ -24,7 +21,7 @@ Pod::Spec.new do |s|
   s.dependency 'AlamofireImage'
   s.dependency 'RxSwift'
   s.dependency 'RxCocoa'
-
+  s.xcconfig            = { "LIBRARY_SEARCH_PATHS" => '"$(PODS_ROOT)/iMojeSDK"' }
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.frameworks = 'Foundation', 'Security', 'UIKit', 'WebKit'
