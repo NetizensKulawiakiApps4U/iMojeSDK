@@ -24,5 +24,9 @@ Pod::Spec.new do |s|
   s.dependency 'AlamofireImage'
   s.dependency 'RxSwift'
   s.dependency 'RxCocoa'
+    s.requires_arc        = true
+  s.xcconfig            = { "LIBRARY_SEARCH_PATHS" => '"$(PODS_ROOT)/iMojeSDK"' }
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.frameworks = 'Foundation', 'Security', 'UIKit', 'WebKit'
 end
