@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		YopWGweBUrSERbEP8mdlkybVELc=
+		vaOdNM7x9cSPLDucXR0D5Vmm5HU=
 		</data>
 		<key>Headers/iMojeSDK-Swift.h</key>
 		<data>
-		NerIBzGgSOeFIj9g+pJ1A6ypRaA=
+		WEthtnUAZfCx+lGn4AzpaSxidV4=
 		</data>
-		<key>Headers/iMojeSDK.h</key>
+		<key>Headers/iMojeSDK-umbrella.h</key>
 		<data>
-		G9URDia1NoYpI3cWx4XQnXCxwG4=
+		TIVuWHml8k6a9P6+N/EesNxHclM=
 		</data>
 		<key>INGMe-Bold.ttf</key>
 		<data>
@@ -26,47 +26,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zWqvlu3dzrhsd4rocLBU9wR7bJ8=
+		rVvawsAx8B84S82cVd0a1eQkkdw=
+		</data>
+		<key>Modules/iMojeSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
+		<data>
+		lA/faU+6XjGYGb8DqxP31d0VF5s=
+		</data>
+		<key>Modules/iMojeSDK.swiftmodule/Project/i386-apple-ios-simulator.swiftsourceinfo</key>
+		<data>
+		pi74sCUTSp6RWpRLmCxYh1PV2Vo=
+		</data>
+		<key>Modules/iMojeSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
+		<data>
+		aK+ut+QjhyLDXvktp5ZwnGi44S4=
 		</data>
 		<key>Modules/iMojeSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		UoIiDwoFaHnuEl3WgfgOtrxwGG8=
-		</data>
-		<key>Modules/iMojeSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
-		<data>
-		jUmpB2iw0rMUJmGNmTg7E/ysIHk=
+		ywqEZVCjOA3VSzAYh/XP3crj6zQ=
 		</data>
 		<key>Modules/iMojeSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rn7bxUkdtXvaUaRsdZ3ILng9TUg=
+		hkEgwCYYxjMOJjTHAmgu9r83gkA=
 		</data>
 		<key>Modules/iMojeSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
-		SdrMqRG4q6WoTCizh3nGdgcLEpg=
-		</data>
-		<key>Modules/iMojeSDK.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
-		<data>
-		Z+u+n8Pd3hGP83QHNWqwSj9K0Eo=
+		lhD1WKwDjeJ4KDuhIo4ifiasz14=
 		</data>
 		<key>Modules/iMojeSDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		NozLqFTkE7jjCwPwgL/OhZAbRsg=
+		IA8+76oZsnBJ7YaXpRRkZH+JX00=
 		</data>
 		<key>Modules/iMojeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Dzjm05Awo/3Ci/8a5LBN1RjwfB8=
-		</data>
-		<key>Modules/iMojeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
-		<data>
-		YakvkQYtu1Tq2c+RnAKkTI3QUPs=
+		g6R9aCFxJB6iTsecYqKASCPK3D4=
 		</data>
 		<key>Modules/iMojeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pGG0kzH2zTxG48kwDsRaNOi/zTs=
+		zp4EcqGttkkXvX77tubUoyitCZM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		op3+8i49x0krJHomrx9Ny1zeqGI=
+		EIND8t22faa0ubdLfhf9n6+ZWlI=
 		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
@@ -77,6 +77,34 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>iMojeSDKBundle.bundle/Assets.car</key>
+		<data>
+		vaOdNM7x9cSPLDucXR0D5Vmm5HU=
+		</data>
+		<key>iMojeSDKBundle.bundle/Info.plist</key>
+		<data>
+		6x5uClUcP+v5ufQcue8NLJYr+GM=
+		</data>
+		<key>iMojeSDKBundle.bundle/_CodeSignature/CodeDirectory</key>
+		<data>
+		QejGXtU98RqW6IIPKVSOIgvC+8Y=
+		</data>
+		<key>iMojeSDKBundle.bundle/_CodeSignature/CodeRequirements</key>
+		<data>
+		OnX22wWFKRSOFN1+obRynMCeyXM=
+		</data>
+		<key>iMojeSDKBundle.bundle/_CodeSignature/CodeRequirements-1</key>
+		<data>
+		uRtqcO33sWU3236nCA+KHzZ3tYc=
+		</data>
+		<key>iMojeSDKBundle.bundle/_CodeSignature/CodeResources</key>
+		<data>
+		ijGIWFQKbDHsBBgnGyoWmqOm4jY=
+		</data>
+		<key>iMojeSDKBundle.bundle/_CodeSignature/CodeSignature</key>
+		<data>
+		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		</data>
 		<key>pl.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -93,33 +121,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YopWGweBUrSERbEP8mdlkybVELc=
+			vaOdNM7x9cSPLDucXR0D5Vmm5HU=
 			</data>
 			<key>hash2</key>
 			<data>
-			k/LDADXB2RLGDB1K3lbsAVcAqXOrpoa+XJJ3Yn0go3A=
+			UWKUJAK4aKf9CiDnApWkzTLaQ52NbfwAht4NGZPNOGk=
 			</data>
 		</dict>
 		<key>Headers/iMojeSDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NerIBzGgSOeFIj9g+pJ1A6ypRaA=
+			WEthtnUAZfCx+lGn4AzpaSxidV4=
 			</data>
 			<key>hash2</key>
 			<data>
-			2Fw584DDGc2oW/VD+P/sQDTkx3eHKGyG5fXQQ2NNUPg=
+			RYWsC0OSZlwCWoMiJPAV8nEiBdwR5Hw7nU6/bF9P4kY=
 			</data>
 		</dict>
-		<key>Headers/iMojeSDK.h</key>
+		<key>Headers/iMojeSDK-umbrella.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			G9URDia1NoYpI3cWx4XQnXCxwG4=
+			TIVuWHml8k6a9P6+N/EesNxHclM=
 			</data>
 			<key>hash2</key>
 			<data>
-			yWkcaudwm7IhfnPXdnMyQW4Z1UX8r7jZRxJ49cFjr94=
+			ZhabhaxoGKH0nCGNz3gora4u8ZlHiAMaVX9A+WczxMk=
 			</data>
 		</dict>
 		<key>INGMe-Bold.ttf</key>
@@ -144,114 +172,114 @@
 			4vrdlHcb+gEJbviQwBwfcQ9efGeb+ZzrglNXAKzPqmQ=
 			</data>
 		</dict>
+		<key>Modules/iMojeSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lA/faU+6XjGYGb8DqxP31d0VF5s=
+			</data>
+			<key>hash2</key>
+			<data>
+			q1av0Pr1G+1gu7wLvhwEjca7VxSdrtS/0031AfY0QLo=
+			</data>
+		</dict>
+		<key>Modules/iMojeSDK.swiftmodule/Project/i386-apple-ios-simulator.swiftsourceinfo</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pi74sCUTSp6RWpRLmCxYh1PV2Vo=
+			</data>
+			<key>hash2</key>
+			<data>
+			j7GNJX9LYwEiAdTBR9bXWgN8Bn8PisAZEcTxAbFdu7M=
+			</data>
+		</dict>
+		<key>Modules/iMojeSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aK+ut+QjhyLDXvktp5ZwnGi44S4=
+			</data>
+			<key>hash2</key>
+			<data>
+			CW//msNo0m3zCgjMk8L2g+zMXgwE3XfTdCEYDvk4a98=
+			</data>
+		</dict>
 		<key>Modules/iMojeSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UoIiDwoFaHnuEl3WgfgOtrxwGG8=
+			ywqEZVCjOA3VSzAYh/XP3crj6zQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ThsTEPKyaNTgRgxzDrbTo+XUFu9BOnpYBEhL3saiSX4=
-			</data>
-		</dict>
-		<key>Modules/iMojeSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jUmpB2iw0rMUJmGNmTg7E/ysIHk=
-			</data>
-			<key>hash2</key>
-			<data>
-			piqVlMR6Qp4zpx+tUdLkrgAATWvV76p2QOw5yK40iic=
+			sjPDIg2Y7nLX4rEcOuxFKtX90Nvyr/nH/UgqeMJwHBc=
 			</data>
 		</dict>
 		<key>Modules/iMojeSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rn7bxUkdtXvaUaRsdZ3ILng9TUg=
+			hkEgwCYYxjMOJjTHAmgu9r83gkA=
 			</data>
 			<key>hash2</key>
 			<data>
-			0nwwAjmyxXWH/mIIwOOrQI6R2Ck9EYdc+qeDwitfK3s=
+			bTLQzhDMBXY6dlc/gZFhb/xuYBauS0SXPXC1etqXRX4=
 			</data>
 		</dict>
 		<key>Modules/iMojeSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SdrMqRG4q6WoTCizh3nGdgcLEpg=
+			lhD1WKwDjeJ4KDuhIo4ifiasz14=
 			</data>
 			<key>hash2</key>
 			<data>
-			FPjT6jSNw+cURo/KRwHLzywRwl28q5loEC34rLsQ+cU=
-			</data>
-		</dict>
-		<key>Modules/iMojeSDK.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Z+u+n8Pd3hGP83QHNWqwSj9K0Eo=
-			</data>
-			<key>hash2</key>
-			<data>
-			5c2EifbScjHVoKUGXhVaO3x6POKIP3rM3CPpY1L/2tc=
+			+KP+fUvYO6Ex/hhOXH9dsdr7ELsin9PY58pC7u1XYOQ=
 			</data>
 		</dict>
 		<key>Modules/iMojeSDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NozLqFTkE7jjCwPwgL/OhZAbRsg=
+			IA8+76oZsnBJ7YaXpRRkZH+JX00=
 			</data>
 			<key>hash2</key>
 			<data>
-			oUtIi4mgEHcCFMyqOz5BhD6wXutM8R0VqDaxse5Vics=
+			dnn0EyAFe8lr57XuyL6M6TVd3hgrEhed0rt1TuGCHBc=
 			</data>
 		</dict>
 		<key>Modules/iMojeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Dzjm05Awo/3Ci/8a5LBN1RjwfB8=
+			g6R9aCFxJB6iTsecYqKASCPK3D4=
 			</data>
 			<key>hash2</key>
 			<data>
-			OyRQCZ2kW1nahNKpvfLW1PXz0llRaMyejN19FYQbc0I=
-			</data>
-		</dict>
-		<key>Modules/iMojeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			YakvkQYtu1Tq2c+RnAKkTI3QUPs=
-			</data>
-			<key>hash2</key>
-			<data>
-			Pgdgu+Yepd8Tw1iOtEikavX2LSmZx55niZivSc+2N0A=
+			JUviqdv4OT3O8VIFXEK/SZUuzeNt88mhkY6ZhdQ/A10=
 			</data>
 		</dict>
 		<key>Modules/iMojeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pGG0kzH2zTxG48kwDsRaNOi/zTs=
+			zp4EcqGttkkXvX77tubUoyitCZM=
 			</data>
 			<key>hash2</key>
 			<data>
-			yRFgMW+b2Ag0PKYbVSKbm2N2Wow6sJrXzyjUIOH49LE=
+			i2dpUxN5CcjgzOqfzfnFhNHUBQqG2tOgFaov4aRxK7I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			op3+8i49x0krJHomrx9Ny1zeqGI=
+			EIND8t22faa0ubdLfhf9n6+ZWlI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ghMFunqV/nX5Uth2B9fMynPTx9v7ASALscpQP/pkYio=
+			zvupe34LNUtRrafQgkEfm2Kb4KuSgjlImok8GbLc8Js=
 			</data>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
@@ -266,6 +294,83 @@
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>iMojeSDKBundle.bundle/Assets.car</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vaOdNM7x9cSPLDucXR0D5Vmm5HU=
+			</data>
+			<key>hash2</key>
+			<data>
+			UWKUJAK4aKf9CiDnApWkzTLaQ52NbfwAht4NGZPNOGk=
+			</data>
+		</dict>
+		<key>iMojeSDKBundle.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6x5uClUcP+v5ufQcue8NLJYr+GM=
+			</data>
+			<key>hash2</key>
+			<data>
+			e9wu52lXM6S9lElL0s304/PJnJGBumKaV6mvTMvajXM=
+			</data>
+		</dict>
+		<key>iMojeSDKBundle.bundle/_CodeSignature/CodeDirectory</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QejGXtU98RqW6IIPKVSOIgvC+8Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			EKnNmvttn+QqOAwGbAzxFWd0gUz0WsEUDVrNsUuWxgk=
+			</data>
+		</dict>
+		<key>iMojeSDKBundle.bundle/_CodeSignature/CodeRequirements</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OnX22wWFKRSOFN1+obRynMCeyXM=
+			</data>
+			<key>hash2</key>
+			<data>
+			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
+			</data>
+		</dict>
+		<key>iMojeSDKBundle.bundle/_CodeSignature/CodeRequirements-1</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uRtqcO33sWU3236nCA+KHzZ3tYc=
+			</data>
+			<key>hash2</key>
+			<data>
+			L0yHIMPFUWuhQwMtVwWg+Vd/iJ3DbMlgRhiAyl0vvPo=
+			</data>
+		</dict>
+		<key>iMojeSDKBundle.bundle/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ijGIWFQKbDHsBBgnGyoWmqOm4jY=
+			</data>
+			<key>hash2</key>
+			<data>
+			qSYD37K7/jsyIGYQkDMbGLsiHI+YxttQf2GcgcmXlQE=
+			</data>
+		</dict>
+		<key>iMojeSDKBundle.bundle/_CodeSignature/CodeSignature</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+			</data>
+			<key>hash2</key>
+			<data>
+			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			</data>
 		</dict>
 		<key>pl.lproj/Localizable.strings</key>
 		<dict>
