@@ -13,6 +13,10 @@ it, simply add the following line to your Podfile:
 ```swift
 pod 'iMojeSDK'
 ```
+Add this line on the top of pod file
+```swift
+install! 'cocoapods', :disable_input_output_paths => true
+```
 
 ## Localizable
 Create file Localizable.strings like in [iMojeSDK](https://github.com/trmquang93/iMojeSDK/blob/master/iMojeSDK/Assets/Localizations/en.lproj/Localizable.strings)
