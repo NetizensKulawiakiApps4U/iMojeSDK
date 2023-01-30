@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   ]
   s.frameworks = 'Foundation', 'Security', 'UIKit', 'WebKit'
   s.dependency 'Alamofire', '4.9.1'
-  s.dependency 'Kingfisher', '4.10.1'
+  s.dependency 'AlamofireImage', '3.6.0'
   s.dependency 'RxSwift', '6.5.0'
   s.dependency 'RxCocoa', '6.5.0'
   s.subspec 'SDKSupport' do |sp|
