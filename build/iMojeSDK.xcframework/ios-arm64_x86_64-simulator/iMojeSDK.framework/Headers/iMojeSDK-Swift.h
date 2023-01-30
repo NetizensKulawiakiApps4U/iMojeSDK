@@ -429,7 +429,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) iMoje * _Non
 @end
 
 /// iMojeSDKError
-typedef SWIFT_ENUM(NSInteger, iMojeSDKError, open) {
+typedef SWIFT_ENUM(NSInteger, iMojeSDKError, closed) {
 /// Raise when user not set merchant id for sdk
   iMojeSDKErrorMissingMerchantId = 0,
 /// Raise when user not set service id for sdk
@@ -888,7 +888,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) iMoje * _Non
 @end
 
 /// iMojeSDKError
-typedef SWIFT_ENUM(NSInteger, iMojeSDKError, open) {
+typedef SWIFT_ENUM(NSInteger, iMojeSDKError, closed) {
 /// Raise when user not set merchant id for sdk
   iMojeSDKErrorMissingMerchantId = 0,
 /// Raise when user not set service id for sdk

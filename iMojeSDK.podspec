@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   s.dependency 'Kingfisher', '4.10.1'
   s.dependency 'RxSwift', '6.5.0'
   s.dependency 'RxCocoa', '6.5.0'
-  s.platform          = :ios
-  s.ios.vendored_frameworks = 'build/iMojeSDK.xcframework' # Your XCFramework
+  s.subspec 'SDKSupport' do |sp|
+    sp.vendored_frameworks = 'build/iMojeSDK.xcframework'
+  end
 end

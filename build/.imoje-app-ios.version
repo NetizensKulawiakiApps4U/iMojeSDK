@@ -1,0 +1,28 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "866cc3c0c971b15fd9069bf323d83c81f78e5254",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)",
+      "hash" : "f545fc986316d64f851dbdb42333dab6be936cce0c33f3f8c37d6d22ae2222da",
+      "name" : "iMojeSDK",
+      "container" : "iMojeSDK.xcframework",
+      "identifier" : "ios-arm64"
+    },
+    {
+      "swiftToolchainVersion" : "5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)",
+      "hash" : "9e6a60fa58e7fc6f6eae629706565fa06f73e5410bc8dee877bd98121e4280ef",
+      "name" : "iMojeSDK",
+      "container" : "iMojeSDK.xcframework",
+      "identifier" : "ios-arm64_x86_64-simulator"
+    }
+  ]
+}

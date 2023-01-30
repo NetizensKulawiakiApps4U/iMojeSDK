@@ -1,5 +1,5 @@
 framework module iMojeSDK {
-  umbrella header "iMojeSDK.h"
+  umbrella header "iMojeSDK-umbrella.h"
 
   export *
   module * { export * }
