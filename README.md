@@ -123,6 +123,32 @@ func showWebView(request: URLRequest?, html: String?, baseURL: URL?) {
     showViewController(webView, animated: true)
 }
 ```
+## ApplePay usage
+- Start ApplePay 
+
+```swift
+    var applePayHandler: INGApplePayHandler?
+    
+    func createApplePayPayment(confirm: INGConfirm) {
+        let transaction = INGApplePayTransaction(merchantIdentifier: "Your merchant",
+                                                 paymentItemDescription: "Payment Description",
+                                                 amount: NSDecimalNumber(value: confirm.amount / 100)) // amount = 100.99 is equal to 100,99 zł
+        applePayHandler = INGApplePayHandler(onSuccess: { resultToken in
+            guard let codableToken = resultToken.codable else {
+                return
+            }
+            let transaction: CreateTransaction = self.baseTransaction(confirm: confirm)
+            transaction.paymentMethod = .card
+            transaction.paymentMethodCode = .ecom3ds
+            transaction.wallet = .init(applePay: codableToken)
+            self.createTransaction(transaction)
+        }, onFailure: { [weak self] error in
+            self?.showError(error: error)
+        })
+        applePayHandler?.purchase(in: self, with: transaction)
+    }
+```
+
 ## Author
 
 Netizens, biuro@netizens.pl

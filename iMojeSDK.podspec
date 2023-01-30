@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'iMojeSDK'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'iMojeSDK'
   s.homepage         = 'https://github.com/NetizensKulawiakiApps4U/iMojeSDK'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -17,10 +17,9 @@ Pod::Spec.new do |s|
   ]
   s.frameworks = 'Foundation', 'Security', 'UIKit', 'WebKit'
   s.dependency 'Alamofire', '4.9.1'
-  s.dependency 'AlamofireImage', '3.6.0'
+  s.dependency 'Kingfisher', '4.10.1'
   s.dependency 'RxSwift', '6.5.0'
   s.dependency 'RxCocoa', '6.5.0'
-  s.subspec 'SDKSupport' do |sp|
-    sp.vendored_frameworks = 'build/iMojeSDK.xcframework'
-  end
+  s.platform          = :ios
+  s.ios.vendored_frameworks = 'build/iMojeSDK.xcframework' # Your XCFramework
 end

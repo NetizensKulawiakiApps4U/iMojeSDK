@@ -20,23 +20,23 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          iMojeSDK 0.1.4 Docs
+          iMojeSDK 0.1.6 Docs
         </a>
-         (84% documented)
+         (81% documented)
       </p>
     
-      <p class="header-col--secondary">
+      <div class="header-col--secondary">
         <form role="search" action="search.json">
           <input type="text" placeholder="Search documentation" data-typeahead>
         </form>
-      </p>
+      </div>
     
     
     </header>
 
     <p class="breadcrumbs">
       <a class="breadcrumb" href="index.html">iMojeSDK Reference</a>
-      <img class="carat" src="img/carat.png" />
+      <img class="carat" src="img/carat.png" alt=""/>
       iMojeSDK  Reference
     </p>
 
@@ -46,6 +46,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/INGApplePayHandler.html">INGApplePayHandler</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/INGBankViewController.html">INGBankViewController</a>
               </li>
@@ -77,7 +80,7 @@
                 <a class="nav-group-task-link" href="Classes/PaymentMethodCodeViewCell.html">PaymentMethodCodeViewCell</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/iMojeSDK.html">iMojeSDK</a>
+                <a class="nav-group-task-link" href="Classes/iMoje.html">iMoje</a>
               </li>
             </ul>
           </li>
@@ -137,6 +140,12 @@
             <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/INGApplePayResult.html">INGApplePayResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/INGApplePayTransaction.html">INGApplePayTransaction</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/INGConfirm.html">INGConfirm</a>
               </li>
               <li class="nav-group-task">
@@ -144,6 +153,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/INGPaymentMethod.html">INGPaymentMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/INGSummaryItemApplePay.html">INGSummaryItemApplePay</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs.html#/s:8iMojeSDK14WalletApplePayV">WalletApplePay</a>
               </li>
             </ul>
           </li>
@@ -203,7 +218,7 @@ it, simply add the following line to your Podfile:</p>
 
 <p>Create file Localizable.strings like in <a href="https://git.netizens.pl/imoje/imoje-app-ios/-/tree/develop/iMoje/Localizations/pl.lproj/Localizable.strings">iMojeAppTest</a></p>
 <pre class="highlight swift"><code><span class="c1">// Change sdk language</span>
-<span class="n">iMojeSDK</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">setLanguage</span><span class="p">(</span><span class="nv">language</span><span class="p">:</span> <span class="o">.</span><span class="n">pl</span><span class="p">)</span>
+<span class="n">iMoje</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">setLanguage</span><span class="p">(</span><span class="nv">language</span><span class="p">:</span> <span class="o">.</span><span class="n">pl</span><span class="p">)</span>
 </code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
 
@@ -298,8 +313,31 @@ Salon Samochodowy Warszawa
 
 <span class="nf">showViewController</span><span class="p">(</span><span class="n">webView</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
 <span class="p">}</span>
-</code></pre></li>
+</code></pre>
+<h2 id='applepay-usage' class='heading'>ApplePay usage</h2></li>
+<li><p>Start ApplePay </p></li>
 </ul>
+<pre class="highlight swift"><code>    <span class="k">var</span> <span class="nv">applePayHandler</span><span class="p">:</span> <span class="kt">INGApplePayHandler</span><span class="p">?</span>
+
+    <span class="kd">func</span> <span class="nf">createApplePayPayment</span><span class="p">(</span><span class="nv">confirm</span><span class="p">:</span> <span class="kt">INGConfirm</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">transaction</span> <span class="o">=</span> <span class="kt">INGApplePayTransaction</span><span class="p">(</span><span class="nv">merchantIdentifier</span><span class="p">:</span> <span class="s">"Your merchant"</span><span class="p">,</span>
+                                                 <span class="nv">paymentItemDescription</span><span class="p">:</span> <span class="s">"Payment Description"</span><span class="p">,</span>
+                                                 <span class="nv">amount</span><span class="p">:</span> <span class="kt">NSDecimalNumber</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">confirm</span><span class="o">.</span><span class="n">amount</span> <span class="o">/</span> <span class="mi">100</span><span class="p">))</span> <span class="c1">// amount = 100.99 is equal to 100,99 zł</span>
+        <span class="n">applePayHandler</span> <span class="o">=</span> <span class="kt">INGApplePayHandler</span><span class="p">(</span><span class="nv">onSuccess</span><span class="p">:</span> <span class="p">{</span> <span class="n">resultToken</span> <span class="k">in</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">codableToken</span> <span class="o">=</span> <span class="n">resultToken</span><span class="o">.</span><span class="n">codable</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">return</span>
+            <span class="p">}</span>
+            <span class="k">let</span> <span class="nv">transaction</span><span class="p">:</span> <span class="kt">CreateTransaction</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="nf">baseTransaction</span><span class="p">(</span><span class="nv">confirm</span><span class="p">:</span> <span class="n">confirm</span><span class="p">)</span>
+            <span class="n">transaction</span><span class="o">.</span><span class="n">paymentMethod</span> <span class="o">=</span> <span class="o">.</span><span class="n">card</span>
+            <span class="n">transaction</span><span class="o">.</span><span class="n">paymentMethodCode</span> <span class="o">=</span> <span class="o">.</span><span class="n">ecom3ds</span>
+            <span class="n">transaction</span><span class="o">.</span><span class="n">wallet</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">applePay</span><span class="p">:</span> <span class="n">codableToken</span><span class="p">)</span>
+            <span class="k">self</span><span class="o">.</span><span class="nf">createTransaction</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span>
+        <span class="p">},</span> <span class="nv">onFailure</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">error</span> <span class="k">in</span>
+            <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">showError</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="n">error</span><span class="p">)</span>
+        <span class="p">})</span>
+        <span class="n">applePayHandler</span><span class="p">?</span><span class="o">.</span><span class="nf">purchase</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="n">transaction</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre>
 <h2 id='author' class='heading'>Author</h2>
 
 <p>Netizens, <a href="mailto:biuro@netizens.pl">biuro@netizens.pl</a></p>
@@ -314,9 +352,8 @@ Salon Samochodowy Warszawa
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://git.netizens.pl/imoje" target="_blank" rel="external">Netizens <a href="mailto:biuro@netizens.pl">biuro@netizens.pl</a></a>. All rights reserved. (Last updated: 2020-07-31)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2023 <a class="link" href="https://git.netizens.pl/imoje" target="_blank" rel="external noopener">Netizens <a href="mailto:biuro@netizens.pl">biuro@netizens.pl</a></a>. All rights reserved. (Last updated: 2023-01-30)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
-</div>
 </html>

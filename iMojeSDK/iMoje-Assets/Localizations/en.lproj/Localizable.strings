@@ -51,11 +51,26 @@
 "INFO_CUSTOMER" = "Customer";
 "INFO_PAYMENT_FOR" = "Payment for";
 
-"INFO_POLICY" = "I declare that I have read and accepted %@ *";
+"INFO_POLICY" = "I declare that I have read and accepted %@.";
+"INFO_COOKIE" = "This site use cookies. By staying on website you accept %@.";
 
 "INFO_REGULAMIN_HYPER_LINK" = "imoje terms and conditions";
-"INFO_COOKIE_HYPER_LINK" = "cookie policy";
+"INFO_COOKIE_HYPER_LINK" = "Cookie policy";
 "INFO_PERSONAL_DATA_HYPER_LINK" = "imoje privacy information";
 
-"INFO_TWISTO_REGULAMIN_HYPER_LINK" = "regulations of \“Twisto Pay\”";
-"INFO_TWISTO_PRIVACY_HYPER_LINK" = "twisto privacy information";
+"INFO_TWISTO_REGULAMIN_HYPER_LINK" = "Twisto terms and conditions";
+"INFO_TWISTO_PRIVACY_HYPER_LINK" = "Twisto privacy information";
+
+"INFO_HYPER_LINK_SPLIT" = "and";
+"INFO_CHOSE_PAYMENT_TITLE" = "Select payment method";
+
+"INFO_BANKS_VIEW_TITLE" = "Banks";
+"INFO_POWERD_BY" = "Powered by";
+"INFO_CHOSE_BANK_TITLELABEL" = "Choose your bank";
+
+"INFO_PAYMENT_METHOD_PBL" = "Pay by link";
+"INFO_PAYMENT_METHOD_BLIK" = "BLIK";
+"INFO_PAYMENT_METHOD_TWISTO" = "Twisto";
+"INFO_PAYMENT_METHOD_CARD" = "Pay by card";
+"INFO_PAYMENT_METHOD_APPLE_PAY" = "Apple Pay";
+"INFO_PAYMENT_METHOD_PAYPO" = "PayPo";
