@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'iMojeSDK'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'iMojeSDK'
   s.homepage         = 'https://github.com/NetizensKulawiakiApps4U/iMojeSDK'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

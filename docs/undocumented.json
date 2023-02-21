@@ -156,7 +156,7 @@
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/Presenter/INGWebViewController.swift",
-      "line": 82,
+      "line": 88,
       "symbol": "INGWebViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -170,77 +170,77 @@
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 220,
+      "line": 222,
       "symbol": "INGPaymentMethodImage.url(imageURL:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 221,
+      "line": 223,
       "symbol": "INGPaymentMethodImage.named(imageName:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 222,
+      "line": 224,
       "symbol": "INGPaymentMethodImage.standard(type:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 227,
+      "line": 229,
       "symbol": "INGPaymentStandardMethodImage.blik",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 228,
+      "line": 230,
       "symbol": "INGPaymentStandardMethodImage.pbl",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 229,
+      "line": 231,
       "symbol": "INGPaymentStandardMethodImage.twisto",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 230,
+      "line": 232,
       "symbol": "INGPaymentStandardMethodImage.paypo",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 231,
+      "line": 233,
       "symbol": "INGPaymentStandardMethodImage.card",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 232,
+      "line": 234,
       "symbol": "INGPaymentStandardMethodImage.visa",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 233,
+      "line": 235,
       "symbol": "INGPaymentStandardMethodImage.masterCard",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGChosePaymentMethodView.swift",
-      "line": 234,
+      "line": 236,
       "symbol": "INGPaymentStandardMethodImage.applePay",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
@@ -282,7 +282,7 @@
     },
     {
       "file": "/Users/krystiankulawiak/imoje-sdk-ios/iMojeSDK/Classes/Presentation/View/INGWebView.swift",
-      "line": 144,
+      "line": 148,
       "symbol": "INGWebView.webView(_:decidePolicyFor:decisionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
